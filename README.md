@@ -1,0 +1,2 @@
+# NLP_MP
+Repository yang dibuat untuk mengerjakan tugas kelompok 2 Pengolahan Bahasa Alami : "Morphological Parsing". Program mengenali kata berimbuhan dan kata ulang dalam bahasa Indonesia. Program ini menggunakan method search yang dibuat oleh kelompok sebelumnya untuk mencari apakah kata ada dalam lexicon. Program menerima input sebuah file teks berisi kata- kata dan melakukan morphological parsing terhadap semua kata pada teks. Keluaran berupa list hasil setiap kata dalam sebuah file teks lainnya.
