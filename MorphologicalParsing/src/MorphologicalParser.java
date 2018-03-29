@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -39,12 +38,17 @@ public class MorphologicalParser {
                 if("meng".equals(pref.get(i))){
                     //System.out.println(" "+in.charAt(pref.get(i).length()));
                     if(in.charAt(pref.get(i).length())=='e'){
-                        String temp = in.substring(pref.get(i).length()+1);
-                        if(Trie.getInstance().search(temp)){
-                            in=temp;
+                        if(Trie.getInstance().search(in.substring(pref.get(i).length()))){
+                            in=in.substring(pref.get(i).length());
                         }
                         else{
-                            in = "k"+in.substring(pref.get(i).length());
+                            String temp = in.substring(pref.get(i).length()+1);
+                            if(Trie.getInstance().search(temp)){
+                                in=temp;
+                            }
+                            else{
+                                in = "k"+in.substring(pref.get(i).length());
+                            }
                         }
                         
                     }
