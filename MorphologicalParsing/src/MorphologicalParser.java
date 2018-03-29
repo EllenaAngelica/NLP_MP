@@ -31,30 +31,42 @@ public class MorphologicalParser {
          if(Trie.getInstance().search(in)){
              return in;
          }
+         for(int i =0;i<suf.size();i++){
+            
+            if(in.endsWith(suf.get(i))){
+                
+                in = in.substring(0, (in.length()-suf.get(i).length()));
+                System.out.println(in);
+                break;
+            }
+        }
+         
         for(int i =0;i<pref.size();i++){
           
             if(in.startsWith(pref.get(i))){
                 //System.out.println(pref.get(i));
                 if("meng".equals(pref.get(i))){
-                    //System.out.println(" "+in.charAt(pref.get(i).length()));
-                    if(in.charAt(pref.get(i).length())=='e'){
-                        if(Trie.getInstance().search(in.substring(pref.get(i).length()))){
-                            in=in.substring(pref.get(i).length());
+                    System.out.println(" "+"k"+in.substring(pref.get(i).length()));
+                    
+                        if(Trie.getInstance().search("k"+in.substring(pref.get(i).length()))){
+                            in="k"+in.substring(pref.get(i).length());
                         }
                         else{
-                            String temp = in.substring(pref.get(i).length()+1);
+                            
+                            String temp = in.substring(pref.get(i).length());
                             if(Trie.getInstance().search(temp)){
                                 in=temp;
                             }
+                            
                             else{
-                                in = "k"+in.substring(pref.get(i).length());
-                            }
+                                temp = in.substring(pref.get(i).length()+1);
+                                if(Trie.getInstance().search(temp)){                                
+                                        in=temp;
+                                    }
+                                }
                         }
                         
-                    }
-                    else{
-                        in=in.substring(pref.get(i).length()); 
-                    }
+                    
                 }
                 else if("men".equals(pref.get(i))){
                      if(in.charAt(pref.get(i).length())=='e'){
@@ -72,15 +84,7 @@ public class MorphologicalParser {
         if(Trie.getInstance().search(in)){
              return in;
          }
-        for(int i =0;i<suf.size();i++){
-            
-            if(in.endsWith(suf.get(i))){
-                
-                in = in.substring(0, (in.length()-suf.get(i).length()));
-                System.out.println(in);
-                break;
-            }
-        }
+        
         hasil=in;
         if(hasil!=""){
                 System.out.println(hasil);
