@@ -1,5 +1,8 @@
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,19 +20,42 @@ public class MorphologicalParser {
     public MorphologicalParser(ArrayList<String> pref,ArrayList<String> suf){
         this.pref=pref;
         this.suf=suf;
+        pref.sort(new StringComparator());
+        Collections.reverse(pref);
+        suf.sort(new StringComparator());
+        Collections.reverse(suf);
     }
     
     public String cekBerimbuhan(String input){
          String hasil="";   
          String in = input;
+         if(Trie.getInstance().search(in)){
+             return in;
+         }
         for(int i =0;i<pref.size();i++){
+          
             if(in.startsWith(pref.get(i))){
-                in=in.substring(pref.get(i).length()); 
+                //System.out.println(pref.get(i));
+                if("meng".equals(pref.get(i))){
+                    //System.out.println(" "+in.charAt(pref.get(i).length()));
+                    if(in.charAt(pref.get(i).length())=='e'){
+                        in=in.substring(pref.get(i).length()+1); 
+                    }
+                    else{
+                        in=in.substring(pref.get(i).length()); 
+                    }
+                }
+                else{
+                    in=in.substring(pref.get(i).length()); 
+                }
+                
                 System.out.println(in);
                 break;
             }
         }
-        
+        if(Trie.getInstance().search(in)){
+             return in;
+         }
         for(int i =0;i<suf.size();i++){
             
             if(in.endsWith(suf.get(i))){
@@ -48,4 +74,10 @@ public class MorphologicalParser {
     }
     
     
+}
+class StringComparator implements Comparator<String>{
+   @Override
+   public int compare(String o1, String o2){
+      return Integer.compare(o1.length(), o2.length());
+   }
 }
