@@ -16,7 +16,11 @@ import java.io.InputStreamReader;
  */
 public class Parser {
     /**
-     * Return true/false
+     * 
+     * @param kata
+     * @return true / false
+     * @throws FileNotFoundException
+     * @throws IOException 
      */
     public boolean cekAdaDiLexicon(String kata) throws FileNotFoundException, IOException{
         // Load Lexicon
@@ -31,27 +35,52 @@ public class Parser {
     public void morphologicalParsing(){
     
     }
+    /**
+     * Untuk mengecek apakah kata termasuk reduplikasi
+     * Jenis - jenis reduplikasi :
+     * 1. Kata ulang sebagian
+     * 2. Kata ulang penuh
+     * 3. Kata ulang berubah bunyi
+     * 4. Kata ulang berimbuhan
+     * 5. Kata ulang semu
+     * @param kata
+     * @return
+     * @throws IOException 
+     */
     public String cekReduplikasi(String kata) throws IOException{
         String res = "";
-        if(kata.contains("-")){
+        if(!kata.contains("-")){ // kata ulang sebagian
+            if(this.cekAdaDiLexicon(kata.substring(2))){
+                res = kata.substring(2);
+            }
+            else if(this.cekAdaDiLexicon(kata.substring(2, kata.length()-2))){
+                res = kata.substring(2, kata.length()-2);
+            }
+        }
+        else if(this.cekUlangSemu(kata)){ // kata ulang semu
+            res = kata;
+        }
+        else if(kata.contains("-")){
             int idxHubung = kata.indexOf("-");
-            System.out.println(idxHubung);
             String temp1 = kata.substring(0, idxHubung);
             String temp2 = kata.substring(idxHubung+1);
-            System.out.println(temp1);
-            System.out.println(temp2);
-            if(temp1.equalsIgnoreCase(temp2)){
+            if(temp1.equalsIgnoreCase(temp2)){ // kata ulang penuh
                 res = temp1;
-            }
-            else if(this.cekAdaDiLexicon(temp1) && !this.cekAdaDiLexicon(temp2)){
-                res = temp1;
-            }
-            else if(!this.cekAdaDiLexicon(temp1) && this.cekAdaDiLexicon(temp2)){
-                res = temp2;
             }
         }
         else{
             res = kata;
+        }
+        return res;
+    }
+    private boolean cekUlangSemu(String kata) throws FileNotFoundException, IOException{
+        boolean res = false;
+        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_semu.txt")));
+        String input;
+        while((input=br.readLine())!=null && input.length()!=0){
+            if(kata.equalsIgnoreCase(input)){
+                res = true;
+            }
         }
         return res;
     }
