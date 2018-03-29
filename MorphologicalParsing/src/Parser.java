@@ -31,4 +31,28 @@ public class Parser {
     public void morphologicalParsing(){
     
     }
+    public String cekReduplikasi(String kata) throws IOException{
+        String res = "";
+        if(kata.contains("-")){
+            int idxHubung = kata.indexOf("-");
+            System.out.println(idxHubung);
+            String temp1 = kata.substring(0, idxHubung);
+            String temp2 = kata.substring(idxHubung+1);
+            System.out.println(temp1);
+            System.out.println(temp2);
+            if(temp1.equalsIgnoreCase(temp2)){
+                res = temp1;
+            }
+            else if(this.cekAdaDiLexicon(temp1) && !this.cekAdaDiLexicon(temp2)){
+                res = temp1;
+            }
+            else if(!this.cekAdaDiLexicon(temp1) && this.cekAdaDiLexicon(temp2)){
+                res = temp2;
+            }
+        }
+        else{
+            res = kata;
+        }
+        return res;
+    }
 }
