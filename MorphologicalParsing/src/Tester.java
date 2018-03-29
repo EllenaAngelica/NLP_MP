@@ -32,7 +32,7 @@ public class Tester {
         while((input=prefix.readLine())!=null && input.length()!=0){
             pref.add(input);
         }
-        while((input=prefix.readLine())!=null && input.length()!=0){
+        while((input=sufix.readLine())!=null && input.length()!=0){
             suf.add(input);
         }
         MorphologicalParser parser = new MorphologicalParser(pref,suf);

@@ -31,7 +31,9 @@ public class MorphologicalParser {
         }
         
         for(int i =0;i<suf.size();i++){
+            
             if(in.endsWith(suf.get(i))){
+                
                 in = in.substring(0, (in.length()-suf.get(i).length()));
                 System.out.println(in);
                 break;
