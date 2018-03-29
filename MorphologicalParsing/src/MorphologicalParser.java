@@ -25,10 +25,120 @@ public class MorphologicalParser {
         Collections.reverse(suf);
     }
     
-    public String cekBerimbuhan(String input){
-         String hasil="";   
+    public ArrayList<String> cekBerimbuhan(String input){
+         String hasil="";
          String in = input;
-         if(Trie.getInstance().search(in)){
+         String prefix = "";
+         String infix = "";
+         String suffix = "";
+         ArrayList<String> listKata = new ArrayList<String>();
+         ArrayList<String> listHurufPertama = new ArrayList<String>();
+         boolean hasPrefix = false; //klo true berarti ada prefiks
+         boolean prefixChecked = false; //buat ngeliat apakaha methodnya msh meriksa prefix. kalo true berarti methodnya mulai meriksa yg setelah prefiks
+         boolean hasInfix = false; //kalo true berarti ada infix
+         boolean hasSuffix = false; //kalo true berarti ada suffix
+         boolean flagPrefixM = true; //masih ngaco. otak atik aja
+         boolean ubahHuruf = false; //kalo true berarti huruf pertamanya dirubah
+         int preIndex = 0; //buat nentuin dimana prefiksnya berhenti
+         int panjangKata = 0; // ga guna?
+         for(int i = 0; i < in.length(); i++){
+             hasil += in.substring(i, i + 1);
+             if(prefixChecked){
+                 panjangKata ++;
+             }
+             //cek prefix
+             if(!hasPrefix && preIndex < 2){
+                 for(int j = 0; j < pref.size(); j++){
+                     if(hasil.equals(pref.get(j))){
+                         hasPrefix = true;
+                         prefix = prefix.concat(hasil);
+                         break;
+                     }
+                 }
+             }
+             if(hasPrefix && !prefixChecked){
+                 /**
+                  * 
+                  * MASIH NGACO TOLONG BENERIN
+                  * CONTOH KATA YG GA KEDETECT: menari, mendusta, menampilkan
+                  * KALO MASUKIN KATA (MISALNYA) mencari, YANG MUNCUL CUMA ari
+                  * 
+                  */
+                 if(preIndex >= 2){
+                    //prefixnya ga ngerubah huruf pertama
+                    if((prefix.equals("me") || prefix.equals("pe"))){
+                        if((in.charAt(preIndex) == 'm') && flagPrefixM){
+                            listHurufPertama.add("b");
+                            listHurufPertama.add("b");
+                            listHurufPertama.add("b");
+                            listHurufPertama.add("m");
+                            listHurufPertama.add("p");
+                            listHurufPertama.add("t");
+                            listHurufPertama.add("k");
+                            prefixChecked = true;
+                            ubahHuruf = true;
+                        }
+                        else{
+                            flagPrefixM = false;
+                            if(preIndex == 3){
+                                if(in.charAt(preIndex) == 'g'){
+                                    listHurufPertama.add("a");
+                                    listHurufPertama.add("e");
+                                    listHurufPertama.add("g");
+                                    listHurufPertama.add("h");
+                                    listHurufPertama.add("i");
+                                    listHurufPertama.add("u");
+                                    listHurufPertama.add("o");
+                                    listHurufPertama.add("k");
+                                    listHurufPertama.add("g");
+                                    ubahHuruf = true;
+                                }
+                                else if(in.charAt(preIndex) == 'y'){
+                                    listHurufPertama.add("s");
+                                    ubahHuruf = true;
+                                }
+                                prefixChecked = true;
+                            }
+                            //preIndex++;
+                        }
+                    }
+                    else{
+                        if(preIndex > 3){
+                            prefixChecked = true;
+                        }
+                    }
+                }
+                preIndex++;
+             }
+         }
+         ArrayList<String> hasilList = new ArrayList<>();
+         //kalo ga ada prefiks langsung masukin
+         //kalo udh bisa ngedetect suffix sm infix nanti benerin lg
+         if(!hasPrefix){
+             //System.out.println(hasil);
+             if(Trie.getInstance().search(hasil)){
+                 hasilList.add(hasil);
+             }
+         }
+         else{
+             String temp = hasil.substring(preIndex, hasil.length());
+             //System.out.println(temp); //buat ngecek isi temp
+             if(ubahHuruf){
+                 for(int i = 0; i < listHurufPertama.size(); i++){
+                     String temp2 = listHurufPertama.get(i) + temp;
+                     //System.out.println(temp2);
+                     if(Trie.getInstance().search(temp2)){
+                         hasilList.add(temp2);
+                         //break;
+                     }
+                 }
+             }
+             if(Trie.getInstance().search(temp)){
+                hasilList.add(temp);
+             }
+         }
+         return hasilList;
+         /*if(Trie.getInstance().search(in)){
              return in;
          }
          for(int i =0;i<suf.size();i++){
@@ -89,8 +199,8 @@ public class MorphologicalParser {
         if(hasil!=""){
                 System.out.println(hasil);
                 return hasil;
-        }
-        return input;
+        }*/
+        //return input;
     }
     
     

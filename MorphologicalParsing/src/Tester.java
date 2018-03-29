@@ -39,8 +39,13 @@ public class Tester {
         
         Scanner sc=new Scanner(System.in);
         while(sc.hasNext()){
-            String result = parser.cekBerimbuhan(sc.nextLine());
-            System.out.println(Trie.getInstance().search(result));
+            ArrayList<String> result = new ArrayList<>();
+            result.addAll(parser.cekBerimbuhan(sc.nextLine()));
+            for(int i = 0; i < result.size(); i++){
+                System.out.println(result.get(i));
+            }
+            result.clear();
+            //System.out.println(Trie.getInstance().search(result));
         }
     }
 }
