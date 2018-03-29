@@ -39,10 +39,22 @@ public class MorphologicalParser {
                 if("meng".equals(pref.get(i))){
                     //System.out.println(" "+in.charAt(pref.get(i).length()));
                     if(in.charAt(pref.get(i).length())=='e'){
-                        in=in.substring(pref.get(i).length()+1); 
+                        String temp = in.substring(pref.get(i).length()+1);
+                        if(Trie.getInstance().search(temp)){
+                            in=temp;
+                        }
+                        else{
+                            in = "k"+in.substring(pref.get(i).length());
+                        }
+                        
                     }
                     else{
                         in=in.substring(pref.get(i).length()); 
+                    }
+                }
+                else if("men".equals(pref.get(i))){
+                     if(in.charAt(pref.get(i).length())=='e'){
+                        in="t"+in.substring(pref.get(i).length()); 
                     }
                 }
                 else{
