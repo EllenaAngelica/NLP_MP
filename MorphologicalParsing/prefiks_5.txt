@@ -1,0 +1,7 @@
+hiper
+infra
+intra
+inter
+mikro
+makro
+multi
