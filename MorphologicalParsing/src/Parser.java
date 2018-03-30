@@ -35,6 +35,28 @@ public class Parser {
     public void morphologicalParsing(){
     
     }
+    private boolean cekUlangSemu(String kata) throws FileNotFoundException, IOException{
+        boolean res = false;
+        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_semu.txt")));
+        String input;
+        while((input=br.readLine())!=null && input.length()!=0){
+            if(kata.equalsIgnoreCase(input)){
+                res = true;
+            }
+        }
+        return res;
+    }
+    private boolean cekUlangSebagian(String kata) throws FileNotFoundException, IOException{
+        boolean res = false;
+        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_sebagian.txt")));
+        String input;
+        while((input=br.readLine())!=null && input.length()!=0){
+            if(kata.equalsIgnoreCase(input)){
+                res = true;
+            }
+        }
+        return res;
+    }
     /**
      * Untuk mengecek apakah kata termasuk reduplikasi
      * Jenis - jenis reduplikasi :
@@ -70,17 +92,6 @@ public class Parser {
         }
         else{
             res = kata;
-        }
-        return res;
-    }
-    private boolean cekUlangSemu(String kata) throws FileNotFoundException, IOException{
-        boolean res = false;
-        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_semu.txt")));
-        String input;
-        while((input=br.readLine())!=null && input.length()!=0){
-            if(kata.equalsIgnoreCase(input)){
-                res = true;
-            }
         }
         return res;
     }
