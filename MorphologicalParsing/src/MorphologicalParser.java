@@ -25,6 +25,14 @@ public class MorphologicalParser {
         suf.sort(new StringComparator());
         Collections.reverse(suf);
     }
+    
+        public boolean isVokal(char in){
+        if(in=='a'||in=='e'||in=='i'||in=='u'||in=='o'){
+            return true;
+        }
+        return false;
+        
+    }
 
     public ArrayList<String> cekBerimbuhan(String input) {
         String hasil = "";
