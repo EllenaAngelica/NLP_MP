@@ -100,6 +100,15 @@ public class Parser {
             if(temp1.equalsIgnoreCase(temp2)){ // kata ulang penuh
                 res = temp1;
             }
+            else if(this.cekAdaDiLexicon(temp1) && !this.cekAdaDiLexicon(temp2)){
+                res = temp1;
+            }
+            else if(!this.cekAdaDiLexicon(temp1) && this.cekAdaDiLexicon(temp2)){
+                res = temp2;
+            }
+            else{
+                res = temp1;
+            }
         }
         else{
             res = kata;
