@@ -57,9 +57,9 @@ public class MorphologicalParser {
          if(in.endsWith("an")){                      
                       
                           in = in.substring(0,in.length()-2);
-                          if(!isVokal(in.charAt(in.length()-1))){
+                          if(!isVokal(in.charAt(in.length()-1))&&in.charAt(in.length()-1)=='k'){
                               in = in.substring(0,in.length()-1);
-                          }    
+                          }
          }else if(in.endsWith("i")){
                           char temp = in.charAt(in.length()-2);
                           //System.out.println(temp);
