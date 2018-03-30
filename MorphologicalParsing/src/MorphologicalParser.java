@@ -52,8 +52,7 @@ public class MorphologicalParser {
                           if(!isVokal(in.charAt(in.length()-1))){
                               in = in.substring(0,in.length()-1);
                           }    
-         }
-         if(in.endsWith("i")){
+         }else if(in.endsWith("i")){
                           char temp = in.charAt(in.length()-2);
                           //System.out.println(temp);
                         if(!isVokal(temp)&&!(temp=='k'||temp=='l'||temp=='t'||temp=='g'||temp=='w')){
