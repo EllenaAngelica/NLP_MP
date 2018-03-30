@@ -42,6 +42,46 @@ public class MorphologicalParser {
         boolean ubahHuruf = false; //kalo true berarti huruf pertamanya dirubah
         int preIndex = 0; //buat nentuin dimana prefiksnya berhenti
         int panjangKata = 0; // ga guna?
+        
+        ArrayList<String> hasilList = new ArrayList<>();
+        
+        
+        if (Trie.getInstance().search(hasil)) {
+            hasilList.add(hasil);
+            return hasilList;
+        }
+        else{
+              if(in.startsWith("be")||in.startsWith("te")){
+                  hasil=in.substring(2);
+                  if(hasil.startsWith("l")){
+                      hasil=hasil.substring(1);
+                      if (Trie.getInstance().search(hasil)){
+                        hasilList.add(hasil);
+                        return hasilList;
+                      }
+                  }
+                  else if(hasil.startsWith("r")){
+                      if (Trie.getInstance().search(hasil)){
+                        hasilList.add(hasil);
+                        return hasilList;
+                      }
+                      else{
+                          hasil=hasil.substring(1);
+                          if (Trie.getInstance().search(hasil)){
+                                hasilList.add(hasil);
+                                return hasilList;
+                          }
+                      }
+                  }
+              
+                  else{
+                      if (Trie.getInstance().search(hasil)){
+                                hasilList.add(hasil);
+                                return hasilList;
+                          }
+                  }
+              } else {
+                          
         for (int i = 0; i < in.length(); i++) {
             hasil += in.substring(i, i + 1);
             if (prefixChecked) {
@@ -110,7 +150,7 @@ public class MorphologicalParser {
                 preIndex++;
             }
         }
-        ArrayList<String> hasilList = new ArrayList<>();
+        
         //kalo ga ada prefiks langsung masukin
         //kalo udh bisa ngedetect suffix sm infix nanti benerin lg
         if (Trie.getInstance().search(hasil)) {
@@ -135,7 +175,10 @@ public class MorphologicalParser {
                 hasilList.add(temp);
             }
         }
-        return hasilList;
+        
+              }
+              
+        return hasilList;}
         /*if(Trie.getInstance().search(in)){
              return in;
          }
