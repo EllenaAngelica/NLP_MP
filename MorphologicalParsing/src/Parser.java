@@ -32,9 +32,13 @@ public class Parser {
         // Search in Lexicon
         return Trie.getInstance().search(kata);
     }
-    public void morphologicalParsing(){
-    
-    }
+    /**
+     * 
+     * @param kata
+     * @return
+     * @throws FileNotFoundException
+     * @throws IOException 
+     */
     private boolean cekUlangSemu(String kata) throws FileNotFoundException, IOException{
         boolean res = false;
         BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_semu.txt")));
@@ -46,6 +50,13 @@ public class Parser {
         }
         return res;
     }
+    /**
+     * 
+     * @param kata
+     * @return
+     * @throws FileNotFoundException
+     * @throws IOException 
+     */
     private boolean cekUlangSebagian(String kata) throws FileNotFoundException, IOException{
         boolean res = false;
         BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("ulang_sebagian.txt")));
@@ -71,7 +82,7 @@ public class Parser {
      */
     public String cekReduplikasi(String kata) throws IOException{
         String res = "";
-        if(!kata.contains("-")){ // kata ulang sebagian
+        if(!kata.contains("-") && this.cekUlangSebagian(kata)){ // kata ulang sebagian
             if(this.cekAdaDiLexicon(kata.substring(2))){
                 res = kata.substring(2);
             }
@@ -93,6 +104,15 @@ public class Parser {
         else{
             res = kata;
         }
+        return res;
+    }
+    /**
+     * 
+     * @param kata
+     * @return 
+     */
+    public String morphologicalParsing(String kata){
+        String res = "";
         return res;
     }
 }
