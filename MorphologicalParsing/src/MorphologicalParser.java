@@ -45,41 +45,46 @@ public class MorphologicalParser {
         
         ArrayList<String> hasilList = new ArrayList<>();
         
-        
+        //akhiran
+         if(in.endsWith("an")){                      
+                      
+                          in = in.substring(0,in.length()-2);
+                          if(!isVokal(in.charAt(in.length()-1))){
+                              in = in.substring(0,in.length()-1);
+                          }    
+         }
+         if(in.endsWith("i")){
+                          char temp = in.charAt(in.length()-2);
+                          //System.out.println(temp);
+                        if(!isVokal(temp)&&!(temp=='k'||temp=='l'||temp=='t'||temp=='g'||temp=='w')){
+                              in = in.substring(0,in.length()-1);
+                      }
+         }
+        //kalo ga ada prefiks langsung masukin
+        //kalo udh bisa ngedetect suffix sm infix nanti benerin lg
         if (Trie.getInstance().search(hasil)) {
             hasilList.add(hasil);
             return hasilList;
         }
         else{
+            
               if(in.startsWith("be")||in.startsWith("te")){
+                  
                   hasil=in.substring(2);
-                  if(hasil.startsWith("l")){
+                  if (Trie.getInstance().search(hasil)){
+                                hasilList.add(hasil);
+                                return hasilList;
+                  }
+                  if(hasil.startsWith("l")||hasil.startsWith("r")){
                       hasil=hasil.substring(1);
                       if (Trie.getInstance().search(hasil)){
                         hasilList.add(hasil);
                         return hasilList;
                       }
+                      
                   }
-                  else if(hasil.startsWith("r")){
-                      if (Trie.getInstance().search(hasil)){
-                        hasilList.add(hasil);
-                        return hasilList;
-                      }
-                      else{
-                          hasil=hasil.substring(1);
-                          if (Trie.getInstance().search(hasil)){
-                                hasilList.add(hasil);
-                                return hasilList;
-                          }
-                      }
-                  }
-              
-                  else{
-                      if (Trie.getInstance().search(hasil)){
-                                hasilList.add(hasil);
-                                return hasilList;
-                          }
-                  }
+                  
+                  
               } else {
                           
         for (int i = 0; i < in.length(); i++) {
