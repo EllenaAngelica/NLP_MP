@@ -61,8 +61,8 @@ public class MorphologicalParser {
          }
         //kalo ga ada prefiks langsung masukin
         //kalo udh bisa ngedetect suffix sm infix nanti benerin lg
-        if (Trie.getInstance().search(hasil)) {
-            hasilList.add(hasil);
+        if (Trie.getInstance().search(in)) {
+            hasilList.add(in);
             return hasilList;
         }
         else{
