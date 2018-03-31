@@ -79,7 +79,7 @@ public class MorphologicalParser {
         return (Trie.getInstance().search(s) && !hasilList.contains(s));
     }
 
-    public ArrayList<String> cekBerimbuhan(String input) {
+    public ArrayList<String> cekBerimbuhan(String input,int count) {
         boolean ketemu = false;
         hasilList.clear();
         String in = input;
@@ -89,6 +89,8 @@ public class MorphologicalParser {
         String prefixTemp2 = "";
         String wordParse = "";
         String hasil = "";
+        
+        int counter=count;
 
         String infix = "";
         String suffix = "";
@@ -454,6 +456,14 @@ public class MorphologicalParser {
 //            this.cekInfiks(hasilList.get(i));
 //        }
         this.cekSufiks(in, suf);
+        
+        if(hasilList.isEmpty()&&counter!=2){
+                hasil=prefixTemp;
+                counter++;
+                System.out.println("Ulangi");
+                hasilList=cekBerimbuhan(hasil,counter);
+        }
+        
         return hasilList;
     }
 
