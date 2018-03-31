@@ -170,9 +170,9 @@ public class MorphologicalParser {
                         }
                         else {prefixTemp=temp;
                         if(prefixList.get(i).equals("me")){
-                        prefix+="me";}
+                        prefix="me";}
                         else{
-                            prefix+="pe";
+                            prefix="pe";
                         }
                         }
                         if (temp.substring(0, 1).equals("m")) {
@@ -202,33 +202,38 @@ public class MorphologicalParser {
                             }
                         }
                         if (temp.substring(0, 2).equals("ng")) {
-                            prefix+="ng";
+                            prefix+="g";
+                            
+                            if (cekLexicon(temp.substring(2))) {
+                                hasilList.add(temp.substring(2));
+                            }
+                            else{
+                                prefixTemp=temp.substring(2);
+                            }
                             //ini kalo cuma satu suku kata
                             //harusnya kalo cuma satu suku kata si katanya paling banyak ada tiga huruf
                             if (temp.substring(2, 3).equals("e")) {
+                                prefix+="e";
                                 String temp2 = temp.substring(3);
-                                //System.out.println(temp2);
-                                if(temp2.length() < 4){
+                                //System.out.println("isi temp2 "+temp2);
+                                //if(temp2.length() < 6){
                                     if(cekLexicon(temp2)){
                                         hasilList.add(temp2);
+                                        prefixTemp=temp2;
                                     }
                                     else{
                                         prefixTemp=temp2;
                                     }
-                                }
+                                //}
                             }
+                            //System.out.println(" "+prefixTemp);
 
-                            if (cekLexicon(temp.substring(2))) {
-                                hasilList.add(temp.substring(2));
-                            }
+                            
                             String temp2 = "k" + temp.substring(2);
                             //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
                                 hasilList.add(temp2);
                             }
-                            else{
-                                        prefixTemp=temp2;
-                                    }
 
                         }
                         if (temp.substring(0, 2).equals("ny")) {
@@ -247,9 +252,9 @@ public class MorphologicalParser {
                         }
                     } else if (prefixList.get(i).equals("be") || prefixList.get(i).equals("te")) {
                         if(prefixList.get(i).equals("be"))
-                        {prefix+="be";}
+                        {prefix="be";}
                         else{
-                            prefix+="te";
+                            prefix="te";
                         }
                         if (temp.substring(0, 1).equals("r")) {
                             prefix+="r";
@@ -574,23 +579,29 @@ public class MorphologicalParser {
 //
 //            return hasilList;
 //        }
-        //System.out.println("Prefixtemp "+prefixTemp);
-        if(hasilList.isEmpty()&&prefixTemp.length()!=0){
+        System.out.println("Prefix "+prefix);
+        System.out.println("Prefixtemp "+prefixTemp);
+        
+        if(prefixTemp.length()!=0){
             for(int i = 0;i<suf.size();i++){
                 if(prefixTemp.endsWith(suf.get(i))){
                     String temp = prefixTemp.substring(0,prefixTemp.length()-suf.get(i).length());
+                    System.out.println(temp);
                     if (temp.length() > 2) {
                         if (cekLexicon(temp)) {
-                            hasilList.add(temp);
-                            //System.out.println(temp);
+                            for(int j =0;j<hasilList.size();j++){
+                                if(hasilList.get(j).length()>temp.length()){
+                                    hasilList.clear();
+                                    hasilList.add(temp);
+                                    break;
+                                }
+                            }
+                            //System.out.println("hasil "+temp);
                             break;
                         }
-                }
+                    }
                 }
             }
-        }
-        for(int i = 0;i<hasilList.size();i++){
-            System.out.println(hasilList.get(i));
         }
         return hasilList;
     }
