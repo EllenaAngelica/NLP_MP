@@ -189,9 +189,9 @@ public class MorphologicalParser {
                             if (cekLexicon(temp.substring(1))) {
                                 ketemu = true;
                                 hasilList.add(temp.substring(1));
-                            } else {
-                                prefixTemp = temp.substring(1);
-                            }
+                            } //else {
+                            prefixTemp = temp.substring(1);
+                            //}
                             String temp2 = "p" + temp.substring(1);
                             prefixTemp2 = temp2;
                             if (cekLexicon(temp2)) {
@@ -212,9 +212,9 @@ public class MorphologicalParser {
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
                                 hasilList.add(temp2);
-                            } else {
-                                prefixTemp2 = temp2;
-                            }
+                            } //else {
+                            prefixTemp2 = temp2;
+                            //}
                         }
                         if (temp.substring(0, 2).equals("ng")) {
                             prefix += "g";
@@ -250,27 +250,27 @@ public class MorphologicalParser {
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
                                 hasilList.add(temp2);
-                            } else {
-                                prefixTemp2 = temp2;
-                            }
+                            } //else {
+                            prefixTemp2 = temp2;
+                            //}
 
                         }
                         if (temp.substring(0, 2).equals("ny")) {
                             prefix += "ny";
-                            if (cekLexicon(temp.substring(2))) {
+                            /*if (cekLexicon(temp.substring(2))) {
                                 ketemu = true;
                                 hasilList.add(temp.substring(2));
                             } else {
                                 prefixTemp = temp.substring(2);
-                            }
+                            }*/
                             String temp2 = "s" + temp.substring(2);
                             //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
                                 hasilList.add(temp2);
-                            } else {
-                                prefixTemp2 = temp2;
-                            }
+                            } //else {
+                            prefixTemp = temp2;
+                            //}
                         }
                     } else if (prefixList.get(i).equals("be") || prefixList.get(i).equals("te")) {
                         if (prefixList.get(i).equals("be")) {
@@ -418,10 +418,10 @@ public class MorphologicalParser {
 
             }*/
         }
-        if(prefixTemp2.length() != 0 && !tandaBreak){
+        if (prefixTemp2.length() != 0) {
             this.cekSufiks(prefixTemp2, suf);
         }
-        if(!tandaBreak){
+        if (!tandaBreak) {
             this.cekSufiks(in, suf);
         }
         return hasilList;
