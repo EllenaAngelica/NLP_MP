@@ -88,7 +88,7 @@ public class Tester {
         Scanner sc=new Scanner(System.in);
         while(sc.hasNext()){
             ArrayList<String> result = new ArrayList<>();
-            result.addAll(parser.cekBerimbuhan(sc.nextLine()));
+            result.addAll(parser.cekBerimbuhan(sc.nextLine(),0));
             for(int i = 0; i < result.size(); i++){
                 System.out.println(result.get(i));
             }
