@@ -2,6 +2,7 @@
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -28,11 +29,26 @@ public class Tester {
         BufferedReader prefix4=new BufferedReader(new InputStreamReader(new FileInputStream("prefiks_4.txt")));
         BufferedReader prefix5=new BufferedReader(new InputStreamReader(new FileInputStream("prefiks_5.txt")));
         BufferedReader prefix6=new BufferedReader(new InputStreamReader(new FileInputStream("prefiks_6.txt")));
-        //BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("list_kata.txt")));
+        
+        BufferedReader csvReader = new BufferedReader(new FileReader("kata_dasar_kbbi.csv")); 
+        String line="";
+        while ((line = csvReader.readLine()) != null) {
+
+                // use comma as separator
+                String in = line.substring(0,line.lastIndexOf(","));
+                //System.out.println(in);
+                
+                
+
+                Trie.getInstance().insert(in);
+
+            }
+        
+        //BufferedReader input=new BufferedReader(new InputStreamReader(new FileInputStream("input_kata.txt")));
         String input;
-        while((input=br.readLine())!=null && input.length()!=0){
-            Trie.getInstance().insert(input);
-        }
+        //while((input=br.readLine())!=null && input.length()!=0){
+           // Trie.getInstance().insert(input);
+        //}
         ArrayList<String> pref= new ArrayList<String>();
         ArrayList<String> pref1= new ArrayList<String>();
         ArrayList<String> pref2= new ArrayList<String>();
