@@ -423,15 +423,23 @@ public class MorphologicalParser {
         
         if(adaDuplikat){
             String temp = "";                    
-            if(tempDuplikat==1){
-                temp = prefixTemp2.substring(0,prefixTemp2.length());                    
+            if(tempDuplikat==1&&prefixTemp2.length()!=0){
+                temp = prefixTemp2;                    
             }
-            else{
-                temp = prefixTemp.substring(0,prefixTemp.length());                    
+            else if(tempDuplikat==1&&prefixTemp2.length()==0){
+                if(prefixTemp.length()!=0){
+                    temp=prefixTemp;
+                }
             }
-            
+            else if(tempDuplikat==2&&prefixTemp.length()!=0){
+                temp = prefixTemp;                    
+            }
+            else if(tempDuplikat==2&&prefixTemp.length()==0){
+                if(prefixTemp2.length()!=0){
+                    temp=prefixTemp2;
+                }
+            }
             hasilList.clear();
-            
             for(int i = 0;i<suf.size()&&!tandaBreak;i++){
                 if(temp.endsWith(suf.get(i))){
                     System.out.println("suffix "+suf.get(i));
