@@ -489,6 +489,7 @@ public class MorphologicalParser {
     }
 
     private void cekSufiks(String s, ArrayList<String> suf) {
+        this.kataTanpaAkhiran=s;
         for (int i = 0; i < suf.size(); i++) {
             if (s.endsWith(suf.get(i))) {
                 System.out.println("suffix " + suf.get(i));
