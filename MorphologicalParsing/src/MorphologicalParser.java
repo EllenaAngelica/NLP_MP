@@ -23,6 +23,8 @@ public class MorphologicalParser {
     ArrayList<String> pref6;
     ArrayList<String> suf;
     ArrayList<String> hasilList;
+    
+    String hasilTanpaAkhiran="";
 
     public MorphologicalParser(ArrayList<String> pref, ArrayList<String> suf) {
         this.pref = pref;
@@ -412,6 +414,25 @@ public class MorphologicalParser {
         System.out.println("Prefix " + prefix);
         System.out.println("Prefixtemp " + prefixTemp);
         System.out.println("Prefixtemp2 " + prefixTemp2);
+        
+        if(prefixTemp.isEmpty()&&hasilList.isEmpty()){
+            
+            this.cekSufiks(hasil, suf);
+            
+            if(hasilList.isEmpty()){
+                try {
+                    String kataUlang = new Parser().cekPengulangan(kataTanpaAkhiran);
+                    if(!kataUlang.isEmpty()){
+                        
+                        hasilList.add(kataUlang);
+                        return hasilList;
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+          
 
         //boolean tandaBreak = false;
         //if (prefixTemp.length() != 0) {
@@ -476,6 +497,9 @@ public class MorphologicalParser {
                     if (cekLexicon(temp)) {
                         hasilList.add(temp);
                         //tandaBreak = true;
+                    }
+                    else{
+                        this.kataTanpaAkhiran=temp;
                     }
                 }
             }
