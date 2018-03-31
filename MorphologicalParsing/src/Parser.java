@@ -72,7 +72,7 @@ public class Parser {
     public String cekPengulangan(String kata) throws IOException{
         String hasil="";
         if(cekUlangSemu(kata)){
-            return kata+" kata ulang semu";
+            hasil+= kata+" kata ulang semu ";
         }
         if(kata.contains("-")){
             String[] pecah = kata.split("-");
@@ -80,7 +80,7 @@ public class Parser {
             String belakang = pecah[1];
             
             if(depan.equals(belakang)){
-                return depan+" kata ulang penuh";
+                hasil+= depan+" kata ulang penuh ";
             }
             char[] isiCharDepan = depan.toCharArray();
             char[] isiCharBelakang = belakang.toCharArray();
@@ -99,23 +99,23 @@ public class Parser {
             }
             
             if(jumlahBeda<jumlahSama && isiCharDepan.length==isiCharBelakang.length){
-                return depan+" kata ulang berubah bunyi";
+                hasil+= depan+" kata ulang berubah bunyi ";
             }
             
             
         }
         else{
-            if(kata.charAt(0)==kata.charAt(2)){
+            if(kata.charAt(0)==kata.charAt(2)&&kata.charAt(1)=='e'){
                 if((kata.charAt(0)=='j'||kata.charAt(0)=='t')&&!kata.endsWith("an")){
-                    return kata.substring(2)+" kata ulang sebagian";
+                    hasil+= kata.substring(2)+" kata ulang sebagian ";
                 }
                 else if(kata.endsWith("an")){
-                    return kata.substring(2,kata.length())+" kata ulang sebagian";
+                    hasil+= kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
                 }
                 
             }
         }
-        return kata;
+        return hasil;
     }
     /**
      * Untuk mengecek apakah kata termasuk reduplikasi
