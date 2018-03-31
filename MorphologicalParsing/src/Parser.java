@@ -72,7 +72,7 @@ public class Parser {
     public String cekPengulangan(String kata) throws IOException{
         String hasil="";
         if(cekUlangSemu(kata)){
-            hasil+= kata+" kata ulang semu ";
+            return kata+" kata ulang semu ";
         }
         if(kata.contains("-")){
             String[] pecah = kata.split("-");
@@ -80,7 +80,7 @@ public class Parser {
             String belakang = pecah[1];
             
             if(depan.equals(belakang)){
-                hasil+= depan+" kata ulang penuh ";
+                return depan+" kata ulang penuh ";
             }
             char[] isiCharDepan = depan.toCharArray();
             char[] isiCharBelakang = belakang.toCharArray();
@@ -99,7 +99,7 @@ public class Parser {
             }
             
             if(jumlahBeda<jumlahSama && isiCharDepan.length==isiCharBelakang.length){
-                hasil+= depan+" kata ulang berubah bunyi ";
+                return depan+" kata ulang berubah bunyi ";
             }
             
             
@@ -107,10 +107,10 @@ public class Parser {
         else{
             if(kata.charAt(0)==kata.charAt(2)&&kata.charAt(1)=='e'){
                 if((kata.charAt(0)=='j'||kata.charAt(0)=='t')&&!kata.endsWith("an")){
-                    hasil+= kata.substring(2)+" kata ulang sebagian ";
+                    return kata.substring(2)+" kata ulang sebagian ";
                 }
                 else if(kata.endsWith("an")){
-                    hasil+= kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
+                    return kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
                 }
                 
             }
