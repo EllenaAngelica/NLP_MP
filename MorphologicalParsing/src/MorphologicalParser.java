@@ -350,7 +350,7 @@ public class MorphologicalParser {
                             hasilList.add(temp);
                         }
                         else{
-                        prefixTemp=temp;
+                            prefixTemp=temp;
                         }
                     } else {
                         if (cekLexicon(temp)) {
@@ -403,13 +403,80 @@ public class MorphologicalParser {
         }
 
         System.out.println("isi dari list");
-        
+        for(int i = 0;i<hasilList.size();i++){
+            System.out.println(i+" "+hasilList.get(i));
+        }
         System.out.println("Prefix "+prefix);
        System.out.println("Prefixtemp "+prefixTemp);
         System.out.println("Prefixtemp2 "+prefixTemp2);
         
         boolean tandaBreak=false;
-        if(prefixTemp.length()!=0 && !ketemu){
+        /*boolean adaDuplikat=false;
+        int tempDuplikat=0;
+        
+        for(int i = 0;i<hasilList.size();i++){
+            System.out.println(i+" "+hasilList.get(i));
+            if(hasilList.get(i)==prefixTemp || hasilList.get(i)==prefixTemp2){
+                adaDuplikat=true;
+                System.out.println("Duplikasi");
+                if(hasilList.get(i)==prefixTemp){
+                    tempDuplikat=1;
+                }
+                else{
+                    tempDuplikat=2;
+                }
+            }
+        }
+        
+        /*if(adaDuplikat){
+            String temp = "";                    
+            if(tempDuplikat==1&&prefixTemp2.length()!=0){
+                temp = prefixTemp2;                    
+            }
+            else if(tempDuplikat==1&&prefixTemp2.length()==0){
+                if(prefixTemp.length()!=0){
+                    temp=prefixTemp;
+                }
+            }
+            else if(tempDuplikat==2&&prefixTemp.length()!=0){
+                temp = prefixTemp;                    
+            }
+            else if(tempDuplikat==2&&prefixTemp.length()==0){
+                if(prefixTemp2.length()!=0){
+                    temp=prefixTemp2;
+                }
+            }
+            
+            hasilList.clear();
+            
+            String temp2;
+            if(tempDuplikat==1){
+                temp2=prefixTemp;
+            }
+            else{
+                temp2=prefixTemp2;
+            }
+            
+            for(int i = 0;i<suf.size()&&!tandaBreak;i++){
+                if(temp.endsWith(suf.get(i))){
+                    System.out.println("suffix "+suf.get(i));
+                    temp = temp.substring(0,temp.length()-suf.get(i).length());                    
+                    if (temp.length() > 2) {
+                        if (cekLexicon(temp)) {
+                            
+                                    hasilList.add(temp);
+                                    tandaBreak=true;
+                                   
+                            
+                        }
+                    }
+                }
+                
+            }
+            hasilList.add(temp2);
+        }*/
+        
+         if(prefixTemp.length()!=0 && !ketemu){
             for(int i = 0;i<suf.size()&&!tandaBreak;i++){
                 if(prefixTemp.endsWith(suf.get(i))){
                     System.out.println("suffix "+suf.get(i));
@@ -441,6 +508,27 @@ public class MorphologicalParser {
                 
             }
         }
+         else{
+             for(int i = 0;i<hasilList.size();i++){
+                String temp = hasilList.get(i);
+                 for(int j = 0;j<suf.size()&&!tandaBreak;j++){
+                if(temp.endsWith(suf.get(j))){
+                    System.out.println("suffix "+suf.get(j));
+                    temp = temp.substring(0,temp.length()-suf.get(j).length());                    
+                    
+                        if (cekLexicon(temp)) {
+                            
+                            
+                                    hasilList.set(i,temp);
+                                    tandaBreak=true;
+                                   
+                            
+                        }
+                    
+                }
+            }
+         }
+         }
         return hasilList;
     }
 
