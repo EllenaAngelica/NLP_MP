@@ -185,6 +185,7 @@ public class MorphologicalParser {
                             }
                             String temp2 = "p" + temp.substring(1);
                             if (cekLexicon(temp2)) {
+                                prefixTemp=temp2;
                                 hasilList.add(temp2);
                             }
                         }
@@ -193,9 +194,9 @@ public class MorphologicalParser {
                             if (cekLexicon(temp.substring(1))) {
                                 hasilList.add(temp.substring(1));
                             }
-                            else{
+                            
                                 prefixTemp=temp.substring(1);
-                            }
+                            
                             String temp2 = "t" + temp.substring(1);
                             if (cekLexicon(temp2)) {
                                 hasilList.add(temp2);
@@ -207,9 +208,9 @@ public class MorphologicalParser {
                             if (cekLexicon(temp.substring(2))) {
                                 hasilList.add(temp.substring(2));
                             }
-                            else{
+                            
                                 prefixTemp=temp.substring(2);
-                            }
+                            
                             //ini kalo cuma satu suku kata
                             //harusnya kalo cuma satu suku kata si katanya paling banyak ada tiga huruf
                             if (temp.substring(2, 3).equals("e")) {
@@ -219,11 +220,11 @@ public class MorphologicalParser {
                                 //if(temp2.length() < 6){
                                     if(cekLexicon(temp2)){
                                         hasilList.add(temp2);
-                                        prefixTemp=temp2;
+                                        
                                     }
-                                    else{
+                                    
                                         prefixTemp=temp2;
-                                    }
+                                    
                                 //}
                             }
                             //System.out.println(" "+prefixTemp);
@@ -232,6 +233,7 @@ public class MorphologicalParser {
                             String temp2 = "k" + temp.substring(2);
                             //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
+                                prefixTemp=temp2;
                                 hasilList.add(temp2);
                             }
 
