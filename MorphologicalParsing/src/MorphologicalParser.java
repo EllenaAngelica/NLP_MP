@@ -436,6 +436,7 @@ public class MorphologicalParser {
 //        for (int i = 0; i < hasilList.size(); i++) {
 //            this.cekInfiks(hasilList.get(i));
 //        }
+        this.cekSufiks(in, suf);
         return hasilList;
     }
 
