@@ -23,6 +23,9 @@ public class Trie {
         for (int i = 0; i < len; i++) {
             char c=word.charAt(i);
             int idx=c=='-'?26:c-'a';
+            if(c==' '){
+                idx=27;
+            }
             if(cur.getArr()[idx]==null){
                 cur.getArr()[idx]=new TrieNode();
             }

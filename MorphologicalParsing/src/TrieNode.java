@@ -17,7 +17,7 @@ public class TrieNode {
     private boolean endOfWord;
 
     public TrieNode() {
-        this.children = new TrieNode[27];
+        this.children = new TrieNode[28];
     }
 
     public TrieNode[] getArr() {
