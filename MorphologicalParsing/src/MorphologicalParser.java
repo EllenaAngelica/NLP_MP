@@ -162,7 +162,7 @@ public class MorphologicalParser {
                 if (cekLexicon(temp)) {
                     hasilList.add(temp);
                 }
-
+                this.cekSufiks(temp, suf);
                 prefixTemp = temp;
                 prefixTemp2 = hasil;
 
@@ -198,6 +198,7 @@ public class MorphologicalParser {
                                 ketemu = true;
                                 hasilList.add(temp2);
                             }
+                            this.cekSufiks(temp2, suf);
                         }
                         if (temp.substring(0, 1).equals("n")) {
                             prefix += "n";
@@ -213,6 +214,7 @@ public class MorphologicalParser {
                                 ketemu = true;
                                 hasilList.add(temp2);
                             } //else {
+                            this.cekSufiks(temp2, suf);
                             prefixTemp2 = temp2;
                             //}
                         }
@@ -236,9 +238,8 @@ public class MorphologicalParser {
                                 if (cekLexicon(temp2)) {
                                     ketemu = true;
                                     hasilList.add(temp2);
-
                                 }
-
+                                this.cekSufiks(temp2, suf);
                                 prefixTemp = temp2;
 
                                 //}
@@ -252,6 +253,7 @@ public class MorphologicalParser {
                                 hasilList.add(temp2);
                             } //else {
                             prefixTemp2 = temp2;
+                            this.cekSufiks(temp2, suf);
                             //}
 
                         }
@@ -269,6 +271,7 @@ public class MorphologicalParser {
                                 ketemu = true;
                                 hasilList.add(temp2);
                             } //else {
+                            this.cekSufiks(temp2, suf);
                             prefixTemp = temp2;
                             //}
                         }
@@ -322,6 +325,7 @@ public class MorphologicalParser {
                         }
                     }
                 }
+                this.cekSufiks(temp, suf);
             } //System.out.println(prefix);
             else if (prefixList.get(i).length() == 3) {
                 temp = hasil.substring(3);
@@ -345,6 +349,7 @@ public class MorphologicalParser {
                         }
                     }
                 }
+                this.cekSufiks(temp, suf);
             } else if (prefixList.get(i).length() == 4) {
                 temp = hasil.substring(4);
                 if (temp.length() > 2) {
@@ -356,6 +361,7 @@ public class MorphologicalParser {
                         prefixTemp = temp;
                     }
                 }
+                this.cekSufiks(temp, suf);
             } else if (prefixList.get(i).length() == 5) {
                 temp = hasil.substring(5);
                 if (temp.length() > 2) {
@@ -366,6 +372,7 @@ public class MorphologicalParser {
                         prefixTemp = temp;
                     }
                 }
+                this.cekSufiks(temp, suf);
             }
             if (prefixList.get(i).length() == 6) {
                 temp = hasil.substring(6);
@@ -377,6 +384,7 @@ public class MorphologicalParser {
                         prefixTemp = temp;
                     }
                 }
+                this.cekSufiks(temp, suf);
             }
         }
 
@@ -386,10 +394,10 @@ public class MorphologicalParser {
         System.out.println("Prefixtemp " + prefixTemp);
         System.out.println("Prefixtemp2 " + prefixTemp2);
 
-        boolean tandaBreak = false;
-        if (prefixTemp.length() != 0) {
-            this.cekSufiks(prefixTemp, suf);
-            /*for (int i = 0; i < suf.size() && !tandaBreak; i++) {
+        //boolean tandaBreak = false;
+        //if (prefixTemp.length() != 0) {
+        //    this.cekSufiks(prefixTemp, suf);
+        /*for (int i = 0; i < suf.size() && !tandaBreak; i++) {
                 if (prefixTemp.endsWith(suf.get(i))) {
                     System.out.println("suffix " + suf.get(i));
                     String temp = prefixTemp.substring(0, prefixTemp.length() - suf.get(i).length());
@@ -417,18 +425,17 @@ public class MorphologicalParser {
                 }
 
             }*/
-        }
-        if (prefixTemp2.length() != 0) {
-            this.cekSufiks(prefixTemp2, suf);
-        }
-        if (!tandaBreak) {
-            this.cekSufiks(in, suf);
-        }
-        
-        for (int i = 0; i < hasilList.size(); i++) {
-            this.cekInfiks(hasilList.get(i));
-        }
-        
+//        }
+//        if (prefixTemp2.length() != 0) {
+//            this.cekSufiks(prefixTemp2, suf);
+//        }
+//        if (!tandaBreak) {
+//            this.cekSufiks(in, suf);
+//        }
+//        
+//        for (int i = 0; i < hasilList.size(); i++) {
+//            this.cekInfiks(hasilList.get(i));
+//        }
         return hasilList;
     }
 
@@ -475,8 +482,7 @@ public class MorphologicalParser {
                 if (cekLexicon(temp2)) {
                     hasilList.add(temp2);
                 }
-            } 
-            else if (s.contains("er")) {
+            } else if (s.contains("er")) {
                 temp = s.replace("er", " ");
                 for (int i = 0; i < temp.length(); i++) {
                     if (temp.charAt(i) != ' ') {
@@ -486,26 +492,24 @@ public class MorphologicalParser {
                 if (cekLexicon(temp2)) {
                     hasilList.add(temp2);
                 }
-            } 
-            else if (s.contains("em")) {
+            } else if (s.contains("em")) {
                 temp = s.replace("em", " ");
                 for (int i = 0; i < temp.length(); i++) {
                     if (temp.charAt(i) != ' ') {
                         temp2 += temp.charAt(i);
                     }
                 }
-                if(cekLexicon(temp2)){
+                if (cekLexicon(temp2)) {
                     hasilList.add(temp2);
                 }
-            }
-            else if (s.contains("in")) {
+            } else if (s.contains("in")) {
                 temp = s.replace("in", " ");
                 for (int i = 0; i < temp.length(); i++) {
                     if (temp.charAt(i) != ' ') {
                         temp2 += temp.charAt(i);
                     }
                 }
-                if(cekLexicon(temp2)){
+                if (cekLexicon(temp2)) {
                     hasilList.add(temp2);
                 }
             }
