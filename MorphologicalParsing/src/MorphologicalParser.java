@@ -614,20 +614,23 @@ public class MorphologicalParser {
 //            return hasilList;
 //        }
         //System.out.println("Prefix "+prefix);
-        //System.out.println("Prefixtemp "+prefixTemp);
+       //System.out.println("Prefixtemp "+prefixTemp);
         //System.out.println("Prefixtemp2 "+prefixTemp2);
-        
+        boolean tandaBreak=false;
         if(prefixTemp.length()!=0 && !ketemu){
-            for(int i = 0;i<suf.size();i++){
+            for(int i = 0;i<suf.size()&&!tandaBreak;i++){
                 if(prefixTemp.endsWith(suf.get(i))){
+                    //System.out.println("suffix "+suf.get(i));
                     String temp = prefixTemp.substring(0,prefixTemp.length()-suf.get(i).length());                    
                     if (temp.length() > 2) {
                         if (cekLexicon(temp)) {
                             //for(int j =0;j<hasilList.size();j++){
                                 //if(hasilList.get(j).length()>temp.length()){
                                     //hasilList.clear();
+                                    //System.out.println(temp);
                                     hasilList.add(temp);
-                                    //break;
+                                    tandaBreak=true;
+                                    
                                 //}
                             //}
                            // break;
@@ -636,16 +639,17 @@ public class MorphologicalParser {
                         }
                     }
                 }
-                else if(prefixTemp2.endsWith(suf.get(i))){
+                if(prefixTemp2.endsWith(suf.get(i))){
                     String temp = prefixTemp2.substring(0,prefixTemp2.length()-suf.get(i).length());                    
-                    System.out.println(temp);
+                    //System.out.println(temp);
                     if (temp.length() > 2) {
                         if (cekLexicon(temp)) {
                            // for(int j =0;j<hasilList.size();j++){
                                 //if(hasilList.get(j).length()>temp.length()){
                                     //hasilList.clear();
+                                    //System.out.println(temp);
                                     hasilList.add(temp);
-                                    //break;
+                                    tandaBreak=true;
                                 //}
                             //}
                             //System.out.println("hasil "+temp);
