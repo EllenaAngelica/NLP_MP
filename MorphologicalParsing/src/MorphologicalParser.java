@@ -80,11 +80,15 @@ public class MorphologicalParser {
         hasilList.clear();
         String in = input;
         String prefix = "";
+        
+        String prefixTemp="";
         String wordParse = "";
         String hasil = "";
 
         String infix = "";
         String suffix = "";
+        
+        
 
         ArrayList<String> prefixList = new ArrayList<>();
         //ArrayList<String> hasilList = new ArrayList<>();
@@ -158,12 +162,26 @@ public class MorphologicalParser {
                 temp = hasil.substring(2);
                 if (temp.length() > 2) { // ini cuma supaya kalo disubstring g error
                     if (prefixList.get(i).equals("me") || prefixList.get(i).equals("pe")) {
+                        
+                              
                         if (cekLexicon(temp)) {
                             hasilList.add(temp);
+                            
+                        }
+                        else {prefixTemp=temp;
+                        if(prefixList.get(i).equals("me")){
+                        prefix+="me";}
+                        else{
+                            prefix+="pe";
+                        }
                         }
                         if (temp.substring(0, 1).equals("m")) {
+                            prefix+="m";
                             if (cekLexicon(temp.substring(1))) {
-                                hasilList.add(temp.substring(1));
+                                hasilList.add(temp.substring(1));                                
+                            }                            
+                            else{
+                                prefixTemp=temp.substring(1);
                             }
                             String temp2 = "p" + temp.substring(1);
                             if (cekLexicon(temp2)) {
@@ -171,8 +189,12 @@ public class MorphologicalParser {
                             }
                         }
                         if (temp.substring(0, 1).equals("n")) {
+                            prefix+="n";
                             if (cekLexicon(temp.substring(1))) {
                                 hasilList.add(temp.substring(1));
+                            }
+                            else{
+                                prefixTemp=temp.substring(1);
                             }
                             String temp2 = "t" + temp.substring(1);
                             if (cekLexicon(temp2)) {
@@ -180,6 +202,7 @@ public class MorphologicalParser {
                             }
                         }
                         if (temp.substring(0, 2).equals("ng")) {
+                            prefix+="ng";
                             //ini kalo cuma satu suku kata
                             //harusnya kalo cuma satu suku kata si katanya paling banyak ada tiga huruf
                             if (temp.substring(2, 3).equals("e")) {
@@ -188,6 +211,9 @@ public class MorphologicalParser {
                                 if(temp2.length() < 4){
                                     if(cekLexicon(temp2)){
                                         hasilList.add(temp2);
+                                    }
+                                    else{
+                                        prefixTemp=temp2;
                                     }
                                 }
                             }
@@ -200,12 +226,19 @@ public class MorphologicalParser {
                             if (cekLexicon(temp2)) {
                                 hasilList.add(temp2);
                             }
+                            else{
+                                        prefixTemp=temp2;
+                                    }
 
                         }
                         if (temp.substring(0, 2).equals("ny")) {
+                            prefix+="ny";
                             if (cekLexicon(temp.substring(2))) {
                                 hasilList.add(temp.substring(2));
                             }
+                            else{
+                                        prefixTemp=temp.substring(2);
+                                    }
                             String temp2 = "s" + temp.substring(2);
                             //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
@@ -213,14 +246,26 @@ public class MorphologicalParser {
                             }
                         }
                     } else if (prefixList.get(i).equals("be") || prefixList.get(i).equals("te")) {
+                        if(prefixList.get(i).equals("be"))
+                        {prefix+="be";}
+                        else{
+                            prefix+="te";
+                        }
                         if (temp.substring(0, 1).equals("r")) {
-                            if (cekLexicon(temp)) {
-                                hasilList.add(temp);
+                            prefix+="r";
+                            if (cekLexicon(temp.substring(1))) {
+                                hasilList.add(temp.substring(1));
+                            }
+                            else{
+                                prefixTemp=temp.substring(1);
                             }
                         } else {
                             if (temp.length() > 2 && temp.substring(1, 3).equals("er")) {
-                                if (cekLexicon(temp)) {
-                                    hasilList.add(temp);
+                                if (cekLexicon(temp.substring(3))) {
+                                    hasilList.add(temp.substring(3));
+                                }
+                                else{
+                                    prefixTemp=temp.substring(3);
                                 }
                             }
                         }
@@ -244,12 +289,14 @@ public class MorphologicalParser {
                     }
                 }
             }
+            //System.out.println(prefix);
             if (prefixList.get(i).length() == 3) {
                 temp = hasil.substring(3);
                 if (temp.length() > 2) {
                     // ini kyknya ga perlu dikasih if yg ini
                     // kyknya bisa langsung cek lexicon aja
                     if (prefixList.get(i).equals("ber") || prefixList.get(i).equals("ter")) {
+                        //System.out.println("Masuk ber atau ter");
                         if (cekLexicon(temp)) {
                             hasilList.add(temp);
                         }
@@ -527,6 +574,24 @@ public class MorphologicalParser {
 //
 //            return hasilList;
 //        }
+        //System.out.println("Prefixtemp "+prefixTemp);
+        if(hasilList.isEmpty()&&prefixTemp.length()!=0){
+            for(int i = 0;i<suf.size();i++){
+                if(prefixTemp.endsWith(suf.get(i))){
+                    String temp = prefixTemp.substring(0,prefixTemp.length()-suf.get(i).length());
+                    if (temp.length() > 2) {
+                        if (cekLexicon(temp)) {
+                            hasilList.add(temp);
+                            //System.out.println(temp);
+                            break;
+                        }
+                }
+                }
+            }
+        }
+        for(int i = 0;i<hasilList.size();i++){
+            System.out.println(hasilList.get(i));
+        }
         return hasilList;
     }
 
