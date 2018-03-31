@@ -200,6 +200,23 @@ public class MorphologicalParser {
                             }
                             this.cekSufiks(temp2, suf);
                         }
+                        
+                        else if (temp.substring(0, 1).equals("r")){
+                            prefix += "r";
+                            if (cekLexicon(temp.substring(1))) {
+                                ketemu = true;
+                                hasilList.add(temp.substring(1));
+                            } //else {
+                            prefixTemp = temp.substring(1);
+                            //}
+                            String temp2 = temp;
+                            prefixTemp2 = temp2;
+                            if (cekLexicon(temp2)) {
+                                ketemu = true;
+                                hasilList.add(temp2);
+                            }
+                        }
+                        
                         if (temp.substring(0, 1).equals("n")) {
                             prefix += "n";
                             if (cekLexicon(temp.substring(1))) {
