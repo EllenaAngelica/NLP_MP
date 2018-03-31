@@ -424,6 +424,10 @@ public class MorphologicalParser {
         if (!tandaBreak) {
             this.cekSufiks(in, suf);
         }
+        
+        String inputan = hasilList.get(0);
+        this.cekInfiks(inputan);
+        
         return hasilList;
     }
 
@@ -452,6 +456,58 @@ public class MorphologicalParser {
 
                 }
             }*/
+        }
+    }
+
+    //inputanya itu string yg udh g ad sufix am infix sama file infiks.txt
+    private void cekInfiks(String s) {
+        String temp = s;
+        String temp2 = "";
+        if (!cekLexicon(s)) {
+            if (s.contains("el")) {
+                temp = s.replace("el", " ");
+                for (int i = 0; i < temp.length(); i++) {
+                    if (temp.charAt(i) != ' ') {
+                        temp2 += temp.charAt(i);
+                    }
+                }
+                if (cekLexicon(temp2)) {
+                    hasilList.add(temp2);
+                }
+            } 
+            else if (s.contains("er")) {
+                temp = s.replace("er", " ");
+                for (int i = 0; i < temp.length(); i++) {
+                    if (temp.charAt(i) != ' ') {
+                        temp2 += temp.charAt(i);
+                    }
+                }
+                if (cekLexicon(temp2)) {
+                    hasilList.add(temp2);
+                }
+            } 
+            else if (s.contains("em")) {
+                temp = s.replace("em", " ");
+                for (int i = 0; i < temp.length(); i++) {
+                    if (temp.charAt(i) != ' ') {
+                        temp2 += temp.charAt(i);
+                    }
+                }
+                if(cekLexicon(temp2)){
+                    hasilList.add(temp2);
+                }
+            }
+            else if (s.contains("in")) {
+                temp = s.replace("in", " ");
+                for (int i = 0; i < temp.length(); i++) {
+                    if (temp.charAt(i) != ' ') {
+                        temp2 += temp.charAt(i);
+                    }
+                }
+                if(cekLexicon(temp2)){
+                    hasilList.add(temp2);
+                }
+            }
         }
     }
 }
