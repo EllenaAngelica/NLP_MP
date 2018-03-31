@@ -17,7 +17,8 @@ public class RedupliTest {
         Scanner sc = new Scanner(System.in);
         Parser p = new Parser();
         while(sc.hasNext()){
-            System.out.println("Hasil = " + p.cekReduplikasi(sc.nextLine()));
+            //System.out.println("Hasil = " + p.cekReduplikasi(sc.nextLine()));
+            System.out.println("Hasil = " + p.cekPengulangan(sc.nextLine()));
         }
     }
 }
