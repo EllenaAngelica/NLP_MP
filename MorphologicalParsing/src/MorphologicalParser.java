@@ -99,6 +99,7 @@ public class MorphologicalParser {
         //kalo misalnya kata tersebut udh kata dasar
         if (Trie.getInstance().search(in)) {
             hasilList.add(in);
+            return hasilList;
         }
         for (int i = 0; i < in.length(); i++) {
             hasil += in.substring(i, i + 1);
@@ -163,10 +164,14 @@ public class MorphologicalParser {
                     hasilList.add(temp);
                 }
                 
+                    prefixTemp=temp;
+                    prefixTemp2=hasil;
+                
+                
                     
                 
             }
-            if (prefixList.get(i).length() == 2) {
+            else if (prefixList.get(i).length() == 2) {
                 temp = hasil.substring(2);
                 prefixTemp=temp;
                 if (temp.length() > 2) { // ini cuma supaya kalo disubstring g error
@@ -210,7 +215,7 @@ public class MorphologicalParser {
                             
                                 prefixTemp=temp.substring(1);
                             
-                            String temp2 = "t" + temp.substring(2);
+                            String temp2 = "t" + temp.substring(1);
                             if (cekLexicon(temp2)) {
                                 ketemu=true;
                                 hasilList.add(temp2);
@@ -333,7 +338,7 @@ public class MorphologicalParser {
                 }
             }
             //System.out.println(prefix);
-            if (prefixList.get(i).length() == 3) {
+            else if (prefixList.get(i).length() == 3) {
                 temp = hasil.substring(3);
                 if (temp.length() > 2) {
                     // ini kyknya ga perlu dikasih if yg ini
@@ -358,7 +363,7 @@ public class MorphologicalParser {
                     }
                 }
             }
-            if (prefixList.get(i).length() == 4) {
+            else if (prefixList.get(i).length() == 4) {
                 temp = hasil.substring(4);
                 if (temp.length() > 2) {
                     if (cekLexicon(temp)) {
@@ -371,7 +376,7 @@ public class MorphologicalParser {
                     }
                 }
             }
-            if (prefixList.get(i).length() == 5) {
+            else if (prefixList.get(i).length() == 5) {
                 temp = hasil.substring(5);
                 if (temp.length() > 2) {
                     if (cekLexicon(temp)) {
@@ -439,7 +444,17 @@ public class MorphologicalParser {
                     temp=prefixTemp2;
                 }
             }
+            
             hasilList.clear();
+            
+            String temp2;
+            if(tempDuplikat==1){
+                temp2=prefixTemp;
+            }
+            else{
+                temp2=prefixTemp2;
+            }
+            
             for(int i = 0;i<suf.size()&&!tandaBreak;i++){
                 if(temp.endsWith(suf.get(i))){
                     System.out.println("suffix "+suf.get(i));
@@ -456,6 +471,7 @@ public class MorphologicalParser {
                 }
                 
             }
+            hasilList.add(temp2);
         }
         
         else if(prefixTemp.length()!=0 && !ketemu){
