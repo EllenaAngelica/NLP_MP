@@ -388,7 +388,7 @@ public class MorphologicalParser {
 
         boolean tandaBreak = false;
         if (prefixTemp.length() != 0) {
-            tandaBreak = this.cekSufiks(prefixTemp, suf);
+            this.cekSufiks(prefixTemp, suf);
             /*for (int i = 0; i < suf.size() && !tandaBreak; i++) {
                 if (prefixTemp.endsWith(suf.get(i))) {
                     System.out.println("suffix " + suf.get(i));
@@ -427,7 +427,7 @@ public class MorphologicalParser {
         return hasilList;
     }
 
-    private boolean cekSufiks(String s, ArrayList<String> suf) {
+    private void cekSufiks(String s, ArrayList<String> suf) {
         for (int i = 0; i < suf.size(); i++) {
             if (s.endsWith(suf.get(i))) {
                 System.out.println("suffix " + suf.get(i));
@@ -436,7 +436,6 @@ public class MorphologicalParser {
                     if (cekLexicon(temp)) {
                         hasilList.add(temp);
                         //tandaBreak = true;
-                        return true;
                     }
                 }
             }
@@ -454,7 +453,6 @@ public class MorphologicalParser {
                 }
             }*/
         }
-        return false;
     }
 }
 
