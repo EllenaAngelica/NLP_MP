@@ -20,10 +20,11 @@ public class MorphologicalParser {
     ArrayList<String> pref6;
     ArrayList<String> suf;
     ArrayList<String> hasilList;
+    ArrayList<String> inf;
 
     String hasilTanpaAkhiran = "";
 
-    public MorphologicalParser(ArrayList<String> pref, ArrayList<String> suf) {
+    public MorphologicalParser(ArrayList<String> pref, ArrayList<String> suf,ArrayList<String> inf) {
         this.pref = pref;
         this.suf = suf;
         pref.sort(new StringComparator());
@@ -31,9 +32,10 @@ public class MorphologicalParser {
         suf.sort(new StringComparator());
         Collections.reverse(suf);
         hasilList = new ArrayList<>();
+        this.inf=inf;
     }
 
-    public MorphologicalParser(ArrayList[] preArr, ArrayList<String> suf) {
+    public MorphologicalParser(ArrayList[] preArr, ArrayList<String> suf,ArrayList<String> inf) {
 
         this.suf = suf;
         this.pref1 = preArr[0];
@@ -42,6 +44,7 @@ public class MorphologicalParser {
         this.pref4 = preArr[3];
         this.pref5 = preArr[4];
         this.pref6 = preArr[5];
+        this.inf=inf;
         suf.sort(new StringComparator());
         Collections.reverse(suf);
         pref1.sort(new StringComparator());
@@ -405,17 +408,17 @@ public class MorphologicalParser {
                     Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 if (!kataUlang.isEmpty()) {
-                    System.out.println(kataUlang);
+                    
                     hasilList.add(kataUlang);
                     return hasilList;
                 }
 
                 if (!prefixTemp2.isEmpty()) {
-                    System.out.println("       " + prefixTemp2);
+                    
                     kataUlang = "";
                     try {
                         kataUlang = parser.cekPengulangan(prefixTemp2);
-                        System.out.println("       " + kataUlang);
+                        
                     } catch (IOException ex) {
                         Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -427,12 +430,12 @@ public class MorphologicalParser {
 
                     try {
                         kataUlang = new Parser().cekPengulangan(hasilTanpaAkhiran);
-                        System.out.println("        " + hasilTanpaAkhiran);
+                        
                     } catch (IOException ex) {
                         Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     if (!kataUlang.isEmpty()) {
-                        System.out.println(kataUlang);
+                        
                         hasilList.add(kataUlang);
                         return hasilList;
                     }
@@ -443,17 +446,23 @@ public class MorphologicalParser {
             }
         }
         this.cekSufiks(in, suf);
-
+        if(prefixTemp.length()>0){
+            this.cekInfiks(prefixTemp);
+        }
+        else{
+            this.cekInfiks(hasil);
+        }
         if (hasilList.isEmpty() && counter != 2) {
             hasil = prefixTemp;
             counter++;
-            System.out.println("Ulangi");
+            
             hasilList = cekBerimbuhan(hasil, counter);
 
             if (hasilList.isEmpty()) {
                 hasilList = cekBerimbuhan(prefixTemp2, counter);
             }
         }
+        
         return hasilList;
     }
 
@@ -461,7 +470,7 @@ public class MorphologicalParser {
         this.hasilTanpaAkhiran = s;
         for (int i = 0; i < suf.size(); i++) {
             if (s.endsWith(suf.get(i))) {
-                System.out.println("suffix " + suf.get(i));
+                
                 String temp = s.substring(0, s.length() - suf.get(i).length());
                 if (temp.length() > 2) {
                     if (cekLexicon(temp)) {
@@ -476,48 +485,30 @@ public class MorphologicalParser {
 
     //inputanya itu string yg udh g ad sufix am infix sama file infiks.txt
     private void cekInfiks(String s) {
-        String temp = s;
-        String temp2 = "";
-        if (!cekLexicon(s)) {
-            if (s.contains("el")) {
-                temp = s.replace("el", " ");
-                for (int i = 0; i < temp.length(); i++) {
-                    if (temp.charAt(i) != ' ') {
-                        temp2 += temp.charAt(i);
+        
+        String infix;
+        if (!cekLexicon(s)&&s.length()>2) {
+            //System.out.println(s);
+            for(int i=0;i<inf.size();i++){                
+                infix=inf.get(i);
+                String temp =s.substring(1,3);
+                if(temp.equals(infix)){
+                    if(!isVokal(s.charAt(0))){
+                        if(isVokal(s.charAt(1))){
+                            int j=3;
+                            //while(!isVokal(s.charAt(j))){
+                            //    j++;
+                            //}
+                            
+                            String hasilInfix = s.substring(0,1)+s.substring(j,s.length());
+                                
+                            if(cekLexicon(hasilInfix)){
+                                //String hasilInfix = s.substring(0,j);
+                                //String belakang=s.substring(j+1,s.length());
+                                hasilList.add(hasilInfix);
+                            }
+                        }
                     }
-                }
-                if (cekLexicon(temp2)) {
-                    hasilList.add(temp2);
-                }
-            } else if (s.contains("er")) {
-                temp = s.replace("er", " ");
-                for (int i = 0; i < temp.length(); i++) {
-                    if (temp.charAt(i) != ' ') {
-                        temp2 += temp.charAt(i);
-                    }
-                }
-                if (cekLexicon(temp2)) {
-                    hasilList.add(temp2);
-                }
-            } else if (s.contains("em")) {
-                temp = s.replace("em", " ");
-                for (int i = 0; i < temp.length(); i++) {
-                    if (temp.charAt(i) != ' ') {
-                        temp2 += temp.charAt(i);
-                    }
-                }
-                if (cekLexicon(temp2)) {
-                    hasilList.add(temp2);
-                }
-            } else if (s.contains("in")) {
-                temp = s.replace("in", " ");
-                for (int i = 0; i < temp.length(); i++) {
-                    if (temp.charAt(i) != ' ') {
-                        temp2 += temp.charAt(i);
-                    }
-                }
-                if (cekLexicon(temp2)) {
-                    hasilList.add(temp2);
                 }
             }
         }
