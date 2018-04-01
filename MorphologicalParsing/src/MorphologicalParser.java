@@ -154,7 +154,7 @@ public class MorphologicalParser {
             }
 
         }
-
+        
         for (int i = 0; i < prefixList.size(); i++) {
             String temp;
             if (prefixList.get(i).length() == 1) {
@@ -379,10 +379,28 @@ public class MorphologicalParser {
                 this.cekSufiks(temp, suf);
             }
         }
+        
+        this.cekKataUlang(hasil, prefixTemp2);
+        
+        this.cekSufiks(in, suf);
+
+        if (hasilList.isEmpty() && counter != 2) {
+            hasil = prefixTemp;
+            counter++;
+            System.out.println("Ulangi");
+            hasilList = cekBerimbuhan(hasil, counter);
+
+            if (hasilList.isEmpty()) {
+                hasilList = cekBerimbuhan(prefixTemp2, counter);
+            }
+        }
+        return hasilList;
+    }
+    
+    private ArrayList<String> cekKataUlang(String hasil, String prefixTemp2){
         String kataUlang = "";
 
         if (hasilList.isEmpty()) {
-
             if (hasil.contains("-")) {
                 Parser parser = new Parser(this);
                 String[] cekDepanBelakang = hasil.split("-");
@@ -438,24 +456,240 @@ public class MorphologicalParser {
                     }
 
                 }
-            } else {
+            } 
+            else {
                 this.cekSufiks(hasil, suf);
             }
         }
-        this.cekSufiks(in, suf);
-
-        if (hasilList.isEmpty() && counter != 2) {
-            hasil = prefixTemp;
-            counter++;
-            System.out.println("Ulangi");
-            hasilList = cekBerimbuhan(hasil, counter);
-
-            if (hasilList.isEmpty()) {
-                hasilList = cekBerimbuhan(prefixTemp2, counter);
-            }
-        }
-        return hasilList;
+        return null;
     }
+    
+//    private void cekPrefiks(ArrayList<String> prefixList, String hasil, String prefixTemp,String prefixTemp2,boolean ketemu,String prefix){
+//        for (int i = 0; i < prefixList.size(); i++) {
+//            String temp;
+//            if (prefixList.get(i).length() == 1) {
+//                temp = hasil.substring(1); //BELUM NGECEK SUFIKS. KALO SUFIKS UDAH MASUK TOLONG GANTI UPPERBOUNDNYA
+//                if (cekLexicon(temp)) {
+//                    hasilList.add(temp);
+//                }
+//                this.cekSufiks(temp, suf);
+//                prefixTemp = temp;
+//                prefixTemp2 = hasil;
+//
+//            } else if (prefixList.get(i).length() == 2) {
+//                temp = hasil.substring(2);
+//                prefixTemp = temp;
+//                if (temp.length() > 2) { // ini cuma supaya kalo disubstring g error
+//                    if (prefixList.get(i).equals("me") || prefixList.get(i).equals("pe")) {
+//
+//                        if (cekLexicon(temp)) {
+//                            hasilList.add(temp);
+//                            ketemu = true;
+//
+//                        } else {
+//                            prefixTemp = temp;
+//                            if (prefixList.get(i).equals("me")) {
+//                                prefix = "me";
+//                            } else {
+//                                prefix = "pe";
+//                            }
+//                        }
+//                        if (temp.substring(0, 1).equals("m")) {
+//                            prefix += "m";
+//                            if (cekLexicon(temp.substring(1))) {
+//                                ketemu = true;
+//                                hasilList.add(temp.substring(1));
+//                            } //else {
+//                            prefixTemp = temp.substring(1);
+//                            this.cekSufiks(prefixTemp, suf);
+//                            //}
+//                            String temp2 = "p" + temp.substring(1);
+//                            prefixTemp2 = temp2;
+//                            if (cekLexicon(temp2)) {
+//                                ketemu = true;
+//                                hasilList.add(temp2);
+//                            }
+//                            this.cekSufiks(temp2, suf);
+//                        }
+//
+//                        if (temp.substring(0, 1).equals("n")) {
+//                            prefix += "n";
+//                            if (cekLexicon(temp.substring(1))) {
+//                                ketemu = true;
+//                                hasilList.add(temp.substring(1));
+//                            }
+//
+//                            prefixTemp = temp.substring(1);
+//                            this.cekSufiks(prefixTemp, suf);
+//
+//                            String temp2 = "t" + temp.substring(1);
+//                            if (cekLexicon(temp2)) {
+//                                ketemu = true;
+//                                hasilList.add(temp2);
+//                            } //else {
+//                            this.cekSufiks(temp2, suf);
+//                            prefixTemp2 = temp2;
+//                            //}
+//                        }
+//                        if (temp.substring(0, 2).equals("ng")) {
+//                            prefix += "g";
+//
+//                            if (cekLexicon(temp.substring(2))) {
+//                                ketemu = true;
+//                                hasilList.add(temp.substring(2));
+//                            }
+//
+//                            prefixTemp = temp.substring(2);
+//
+//                            //ini kalo cuma satu suku kata
+//                            //harusnya kalo cuma satu suku kata si katanya paling banyak ada tiga huruf
+//                            if (temp.substring(2, 3).equals("e")) {
+//                                prefix += "e";
+//                                String temp2 = temp.substring(3);
+//                                if (cekLexicon(temp2)) {
+//                                    ketemu = true;
+//                                    hasilList.add(temp2);
+//                                }
+//                                this.cekSufiks(temp2, suf);
+//                                prefixTemp = temp2;
+//                            }
+//                            String temp2 = "k" + temp.substring(2);
+//                            if (cekLexicon(temp2)) {
+//                                ketemu = true;
+//                                hasilList.add(temp2);
+//                            }
+//                            prefixTemp2 = temp2;
+//                            this.cekSufiks(temp2, suf);
+//                        }
+//                        if (temp.substring(0, 2).equals("ny")) {
+//                            prefix += "ny";
+//                            String temp2 = "s" + temp.substring(2);
+//                            if (cekLexicon(temp2)) {
+//                                ketemu = true;
+//                                hasilList.add(temp2);
+//                            }
+//                            this.cekSufiks(temp2, suf);
+//                            prefixTemp = temp2;
+//                        }
+//                    } else if (prefixList.get(i).equals("be") || prefixList.get(i).equals("te")) {
+//                        if (prefixList.get(i).equals("be")) {
+//                            prefix = "be";
+//                        } else {
+//                            prefix = "te";
+//                        }
+//
+//                        if (temp.substring(0, 1).equals("r")) {
+//                            prefix += "r";
+//                            prefixTemp2 = temp;
+//                            if(cekLexicon(temp)){
+//                                ketemu = true;
+//                                hasilList.add(temp);
+//                            }
+//                            if (cekLexicon(temp.substring(1))) {
+//                                ketemu = true;
+//                                hasilList.add(temp.substring(1));
+//                            } else {
+//                                prefixTemp = temp.substring(1);
+//
+//                            }
+//                        } else {
+//                            if (temp.length() > 2 && temp.substring(1, 3).equals("er")) {
+//                                if (cekLexicon(temp.substring(3))) {
+//                                    ketemu = true;
+//                                    hasilList.add(temp.substring(3));
+//                                } else {
+//                                    prefixTemp = temp.substring(3);
+//                                }
+//                            }
+//                        }
+//                    } else {
+//                        if (cekLexicon(temp)) {
+//                            ketemu = true;
+//                            hasilList.add(temp);
+//                        }
+//                    }
+//                    // KATA KHUSUS YG DIUBAH JADI L
+//                    // KALO TERNYATA ADA ATURAN YG BIKIN KATA BISA BERUBAH JADI L NANTI GANTI
+//                    // KATA KHUSUS KAYAKNYA HARUS HARDCODE
+//                    if (temp.contains("lajar")) {
+//                        if (cekLexicon(temp)) {
+//                            ketemu = true;
+//                            hasilList.add(temp);
+//                        } else {
+//                            prefixTemp = prefixTemp.substring(1);
+//                        }
+//                    }
+//                    if (temp.contains("lunjur")) {
+//                        if (cekLexicon(temp)) {
+//                            ketemu = true;
+//                            hasilList.add(temp);
+//                        } else {
+//                            prefixTemp = prefixTemp.substring(1);
+//                        }
+//                    }
+//                }
+//                this.cekSufiks(temp, suf);
+//            }
+//            else if (prefixList.get(i).length() == 3) {
+//                temp = hasil.substring(3);
+//                if (temp.length() > 2) {
+//                    // ini kyknya ga perlu dikasih if yg ini
+//                    // kyknya bisa langsung cek lexicon aja
+//                    if (prefixList.get(i).equals("ber") || prefixList.get(i).equals("ter")) {
+//                        if (cekLexicon(temp)) {
+//                            ketemu = true;
+//                            hasilList.add(temp);
+//                        } else {
+//                            prefixTemp = temp;
+//                        }
+//                    } else {
+//                        if (cekLexicon(temp)) {
+//                            ketemu = true;
+//                            hasilList.add(temp);
+//                        } else {
+//                            prefixTemp = temp;
+//                        }
+//                    }
+//                }
+//                this.cekSufiks(temp, suf);
+//            } else if (prefixList.get(i).length() == 4) {
+//                temp = hasil.substring(4);
+//                if (temp.length() > 2) {
+//                    if (cekLexicon(temp)) {
+//                        prefix = hasil.substring(0, 4);
+//                        ketemu = true;
+//                        hasilList.add(temp);
+//                    } else {
+//                        prefixTemp = temp;
+//                    }
+//                }
+//                this.cekSufiks(temp, suf);
+//            } else if (prefixList.get(i).length() == 5) {
+//                temp = hasil.substring(5);
+//                if (temp.length() > 2) {
+//                    if (cekLexicon(temp)) {
+//                        ketemu = true;
+//                        hasilList.add(temp);
+//                    } else {
+//                        prefixTemp = temp;
+//                    }
+//                }
+//                this.cekSufiks(temp, suf);
+//            }
+//            if (prefixList.get(i).length() == 6) {
+//                temp = hasil.substring(6);
+//                if (temp.length() > 2) {
+//                    if (cekLexicon(temp)) {
+//                        ketemu = true;
+//                        hasilList.add(temp);
+//                    } else {
+//                        prefixTemp = temp;
+//                    }
+//                }
+//                this.cekSufiks(temp, suf);
+//            }
+//        }
+//    }
 
     private void cekSufiks(String s, ArrayList<String> suf) {
         this.hasilTanpaAkhiran = s;
