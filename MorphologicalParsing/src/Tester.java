@@ -12,15 +12,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author CorneliusDavid
  */
 public class Tester {
     public static void main(String[] args) throws FileNotFoundException, IOException {
@@ -38,21 +31,10 @@ public class Tester {
         String line="";
         while ((line = csvReader.readLine()) != null) {
 
-                // use comma as separator
                 String in = line;
-                //System.out.println(in);
-                
-                
-
                 Trie.getInstance().insert(in);
-
             }
-        
-        //BufferedReader input=new BufferedReader(new InputStreamReader(new FileInputStream("input_kata.txt")));
         String input;
-        //while((input=br.readLine())!=null && input.length()!=0){
-           // Trie.getInstance().insert(input);
-        //}
         ArrayList<String> pref= new ArrayList<String>();
         ArrayList<String> pref1= new ArrayList<String>();
         ArrayList<String> pref2= new ArrayList<String>();
@@ -86,11 +68,9 @@ public class Tester {
             suf.add(input);
         }
         ArrayList[] preArr = {pref1, pref2, pref3, pref4, pref5, pref6};
-        //MorphologicalParser parser = new MorphologicalParser(pref,suf);
         MorphologicalParser parser = new MorphologicalParser(preArr,suf);
         BufferedReader inputtext=new BufferedReader(new InputStreamReader(new FileInputStream("inputantext.txt")));
        Scanner sc=new Scanner(inputtext);
-       //Scanner sc=new Scanner(System.in);
        
        ArrayList<String> hasilPenelusuran = new ArrayList<String>();
         while(sc.hasNext()){
@@ -115,14 +95,10 @@ public class Tester {
                     simbol="";
                 }
                 kataAwal+=result.get(i)+simbol;
-                //System.out.println(result.get(i));
             }
             result.clear();
             hasilPenelusuran.add(kataAwal);
-            //System.out.println(Trie.getInstance().search(result));
         }
-        
-        
             File newTextFile = new File("hasilparser.txt");
             
             FileWriter fw = new FileWriter(newTextFile);
@@ -131,23 +107,11 @@ public class Tester {
                 fw.write(hasilPenelusuran.get(i));
                 fw.write(System.getProperty("line.separator"));
             }
-            
-            
             fw.close();
     }
     private static String hilangkanSimbol(String input){
         String output=input;
-        
-        
-            
-        //if(output.contains(simbol="+")||output.contains(simbol=".")||output.contains(simbol="?")||output.contains(simbol=",")||output.contains(simbol="!")||output.contains(simbol=":")||output.contains(simbol=" ")||output.contains(simbol=":")||output.contains(simbol="/")){
             output=output.replaceAll("[^-a-zA-Z]*", "");
             return output;
-        //}
-        //else
-            //return input;
-        
     }
-        
- 
 }

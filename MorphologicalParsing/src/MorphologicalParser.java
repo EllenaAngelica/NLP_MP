@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,11 +5,6 @@ import java.util.Comparator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author WIN 10
@@ -101,7 +95,6 @@ public class MorphologicalParser {
         String suffix = "";
 
         ArrayList<String> prefixList = new ArrayList<>();
-        //ArrayList<String> hasilList = new ArrayList<>();
 
         //kalo misalnya kata tersebut udh kata dasar
         if (Trie.getInstance().search(in)) {
@@ -208,21 +201,6 @@ public class MorphologicalParser {
                             }
                             this.cekSufiks(temp2, suf);
                         }
-                        /*else if (temp.substring(0, 1).equals("r")) {
-                            prefix += "r";
-                            if (cekLexicon(temp.substring(1))) {
-                                ketemu = true;
-                                hasilList.add(temp.substring(1));
-                            } //else {
-                            prefixTemp = temp.substring(1);
-                            //}
-                            String temp2 = temp;
-                            prefixTemp2 = temp2;
-                            if (cekLexicon(temp2)) {
-                                ketemu = true;
-                                hasilList.add(temp2);
-                            }
-                        }*/
 
                         if (temp.substring(0, 1).equals("n")) {
                             prefix += "n";
@@ -258,47 +236,30 @@ public class MorphologicalParser {
                             if (temp.substring(2, 3).equals("e")) {
                                 prefix += "e";
                                 String temp2 = temp.substring(3);
-                                //System.out.println("isi temp2 "+temp2);
-                                //if(temp2.length() < 6){
                                 if (cekLexicon(temp2)) {
                                     ketemu = true;
                                     hasilList.add(temp2);
                                 }
                                 this.cekSufiks(temp2, suf);
                                 prefixTemp = temp2;
-
-                                //}
                             }
-                            //System.out.println(" "+prefixTemp);
-
                             String temp2 = "k" + temp.substring(2);
-                            //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
                                 hasilList.add(temp2);
-                            } //else {
+                            }
                             prefixTemp2 = temp2;
                             this.cekSufiks(temp2, suf);
-                            //}
-
                         }
                         if (temp.substring(0, 2).equals("ny")) {
                             prefix += "ny";
-                            /*if (cekLexicon(temp.substring(2))) {
-                                ketemu = true;
-                                hasilList.add(temp.substring(2));
-                            } else {
-                                prefixTemp = temp.substring(2);
-                            }*/
                             String temp2 = "s" + temp.substring(2);
-                            //System.out.println("DEBUG : " + temp2);
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
                                 hasilList.add(temp2);
-                            } //else {
+                            }
                             this.cekSufiks(temp2, suf);
                             prefixTemp = temp2;
-                            //}
                         }
                     } else if (prefixList.get(i).equals("be") || prefixList.get(i).equals("te")) {
                         if (prefixList.get(i).equals("be")) {
@@ -314,7 +275,6 @@ public class MorphologicalParser {
                                 ketemu = true;
                                 hasilList.add(temp);
                             }
-                            //System.out.println(prefixTemp2);
                             if (cekLexicon(temp.substring(1))) {
                                 ketemu = true;
                                 hasilList.add(temp.substring(1));
@@ -359,14 +319,13 @@ public class MorphologicalParser {
                     }
                 }
                 this.cekSufiks(temp, suf);
-            } //System.out.println(prefix);
+            }
             else if (prefixList.get(i).length() == 3) {
                 temp = hasil.substring(3);
                 if (temp.length() > 2) {
                     // ini kyknya ga perlu dikasih if yg ini
                     // kyknya bisa langsung cek lexicon aja
                     if (prefixList.get(i).equals("ber") || prefixList.get(i).equals("ter")) {
-                        //System.out.println("Masuk ber atau ter");
                         if (cekLexicon(temp)) {
                             ketemu = true;
                             hasilList.add(temp);
@@ -420,11 +379,6 @@ public class MorphologicalParser {
                 this.cekSufiks(temp, suf);
             }
         }
-
-        //System.out.println("isi dari list");
-        //System.out.println("Prefix " + prefix);
-        //System.out.println("Prefixtemp " + prefixTemp);
-        //System.out.println("Prefixtemp2 " + prefixTemp2);
         String kataUlang = "";
 
         if (hasilList.isEmpty()) {
@@ -487,51 +441,7 @@ public class MorphologicalParser {
             } else {
                 this.cekSufiks(hasil, suf);
             }
-
         }
-
-        //boolean tandaBreak = false;
-        //if (prefixTemp.length() != 0) {
-        //    this.cekSufiks(prefixTemp, suf);
-        /*for (int i = 0; i < suf.size() && !tandaBreak; i++) {
-                if (prefixTemp.endsWith(suf.get(i))) {
-                    System.out.println("suffix " + suf.get(i));
-                    String temp = prefixTemp.substring(0, prefixTemp.length() - suf.get(i).length());
-                    if (temp.length() > 2) {
-                        if (cekLexicon(temp)) {
-
-                            hasilList.add(temp);
-                            tandaBreak = true;
-
-                        }
-                    }
-                }
-                if (prefixTemp2.endsWith(suf.get(i))) {
-                    String temp = prefixTemp2.substring(0, prefixTemp2.length() - suf.get(i).length());
-
-                    if (temp.length() > 2) {
-                        if (cekLexicon(temp)) {
-
-                            hasilList.add(temp);
-                            tandaBreak = true;
-
-                        }
-
-                    }
-                }
-
-            }*/
-//        }
-//        if (prefixTemp2.length() != 0) {
-//            this.cekSufiks(prefixTemp2, suf);
-//        }
-//        if (!tandaBreak) {
-//            this.cekSufiks(in, suf);
-//        }
-//        
-//        for (int i = 0; i < hasilList.size(); i++) {
-//            this.cekInfiks(hasilList.get(i));
-//        }
         this.cekSufiks(in, suf);
 
         if (hasilList.isEmpty() && counter != 2) {
@@ -544,7 +454,6 @@ public class MorphologicalParser {
                 hasilList = cekBerimbuhan(prefixTemp2, counter);
             }
         }
-
         return hasilList;
     }
 
@@ -557,25 +466,11 @@ public class MorphologicalParser {
                 if (temp.length() > 2) {
                     if (cekLexicon(temp)) {
                         hasilList.add(temp);
-                        //tandaBreak = true;
                     } else {
                         this.hasilTanpaAkhiran = temp;
                     }
                 }
             }
-            /*if (prefixTemp2.endsWith(suf.get(i))) {
-                String temp = prefixTemp2.substring(0, prefixTemp2.length() - suf.get(i).length());
-
-                if (temp.length() > 2) {
-                    if (cekLexicon(temp)) {
-
-                        hasilList.add(temp);
-                        tandaBreak = true;
-
-                    }
-
-                }
-            }*/
         }
     }
 

@@ -34,13 +34,6 @@ public class Parser {
      * @throws IOException 
      */
     public boolean cekAdaDiLexicon(String kata) throws FileNotFoundException, IOException{
-        // Load Lexicon
-       /* BufferedReader brLexicon=new BufferedReader(new InputStreamReader(new FileInputStream("list_kata.txt")));
-        String inputLexicon;
-        while((inputLexicon=brLexicon.readLine())!=null && inputLexicon.length()!=0){
-            Trie.getInstance().insert(inputLexicon);
-        }*/
-        // Search in Lexicon
         return Trie.getInstance().search(kata);
     }
     /**
@@ -187,15 +180,6 @@ public class Parser {
         else{
             res = kata;
         }
-        return res;
-    }
-    /**
-     * 
-     * @param kata
-     * @return 
-     */
-    public String morphologicalParsing(String kata){
-        String res = "";
         return res;
     }
 }
