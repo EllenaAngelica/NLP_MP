@@ -1,7 +1,10 @@
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -440,6 +443,7 @@ public class MorphologicalParser {
             else{
                 this.cekSufiks(hasil, suf);                
             }
+        }
         
           
 
@@ -498,7 +502,7 @@ public class MorphologicalParser {
     }
 
     private void cekSufiks(String s, ArrayList<String> suf) {
-        this.kataTanpaAkhiran=s;
+        this.hasilTanpaAkhiran=s;
         for (int i = 0; i < suf.size(); i++) {
             if (s.endsWith(suf.get(i))) {
                 System.out.println("suffix " + suf.get(i));
@@ -509,7 +513,7 @@ public class MorphologicalParser {
                         //tandaBreak = true;
                     }
                     else{
-                        this.kataTanpaAkhiran=temp;
+                        this.hasilTanpaAkhiran=temp;
                     }
                 }
             }
