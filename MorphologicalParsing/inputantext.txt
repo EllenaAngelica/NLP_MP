@@ -1,0 +1,11 @@
+
+Contoh di atas adalah string multiline. Dalam string multiline, karakter newline diikutkan sebagai bagian dari string. Kamu tidak perlu menggunakan karakter escape n. Dengan demikian, untuk teks yang cukup panjang kode lebih mudah dibaca.
+
+Variabel Konstan
+
+Semua huruf pada nama variabel HANGMANPICS ditulis dalam huruf kapital. Hal ini merupakan konvensi penulisan variabel konstan. Variabel konstan adalah variabel yang dibuat supaya nilainya tidak pernah berubah. Meskipun, kamu bisa tetap merubah isi HANGMANPICS, seperti variabel lainnya, penulisannya dengan huruf kapital akan menginginkanmu supaya jangan melakukannya. Karena variabel HANGMANPICS tidak pernah harus diubah, maka kita menandainya sebagai suatu konstan.
+Seperti konvensi lainnya, kamu tidak perlu mengikutinya. Namun, mengikuti konvensi ini akan mempermudah programmer lain membaca kodemu.
+
+Tipe Data list
+
+Tipe data list adalah tipe data yang nilainya dapat mengandung beberapa nilai lain. Coba masukkan kode ini dalam shell interaktif:
