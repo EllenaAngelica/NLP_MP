@@ -1,12 +1,16 @@
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -84,16 +88,62 @@ public class Tester {
         ArrayList[] preArr = {pref1, pref2, pref3, pref4, pref5, pref6};
         //MorphologicalParser parser = new MorphologicalParser(pref,suf);
         MorphologicalParser parser = new MorphologicalParser(preArr,suf);
-        
-        Scanner sc=new Scanner(System.in);
+        BufferedReader inputtext=new BufferedReader(new InputStreamReader(new FileInputStream("inputantext.txt")));
+       Scanner sc=new Scanner(inputtext);
+       //Scanner sc=new Scanner(System.in);
+       
+       ArrayList<String> hasilPenelusuran = new ArrayList<String>();
         while(sc.hasNext()){
             ArrayList<String> result = new ArrayList<>();
-            result.addAll(parser.cekBerimbuhan(sc.nextLine(),0));
+            String temp = sc.next().toLowerCase();
+            
+            String kataAwal="Kata awal: "+temp+" kata dasar: ";
+           
+            temp=hilangkanSimbol(temp); 
+            
+            System.out.println(temp+" kata");
+            
+            result.addAll(parser.cekBerimbuhan(temp,0));
+           
             for(int i = 0; i < result.size(); i++){
-                System.out.println(result.get(i));
+                String simbol=" | ";
+                if(i==result.size()-1){
+                    simbol="";
+                }
+                kataAwal+=result.get(i)+simbol;
+                //System.out.println(result.get(i));
             }
             result.clear();
+            hasilPenelusuran.add(kataAwal);
             //System.out.println(Trie.getInstance().search(result));
         }
+        
+        
+            File newTextFile = new File("hasilparser.txt");
+            
+            FileWriter fw = new FileWriter(newTextFile);
+            
+            for(int i =0;i<hasilPenelusuran.size();i++){
+                fw.write(hasilPenelusuran.get(i));
+                fw.write(System.getProperty("line.separator"));
+            }
+            
+            
+            fw.close();
     }
+    private static String hilangkanSimbol(String input){
+        String output=input;
+        
+        
+            
+        //if(output.contains(simbol="+")||output.contains(simbol=".")||output.contains(simbol="?")||output.contains(simbol=",")||output.contains(simbol="!")||output.contains(simbol=":")||output.contains(simbol=" ")||output.contains(simbol=":")||output.contains(simbol="/")){
+            output=output.replaceAll("[+.,\\/?=!:;]*", "");
+            return output;
+        //}
+        //else
+            //return input;
+        
+    }
+        
+ 
 }
