@@ -15,13 +15,19 @@ public class TrieNode {
 
     private TrieNode[] children;
     private boolean endOfWord;
+    private TrieNode parent;
 
-    public TrieNode() {
+    public TrieNode(TrieNode parent) {
+        this.parent=parent;
         this.children = new TrieNode[28];
     }
 
     public TrieNode[] getArr() {
         return children;
+    }
+    
+    public TrieNode getParent() {
+        return parent;
     }
 
     public boolean isEndOfWord() {
