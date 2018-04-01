@@ -411,27 +411,36 @@ public class MorphologicalParser {
 
         System.out.println("isi dari list");
 
-        System.out.println("Prefix " + prefix);
-        System.out.println("Prefixtemp " + prefixTemp);
-        System.out.println("Prefixtemp2 " + prefixTemp2);
+        //System.out.println("Prefix " + prefix);
+        //System.out.println("Prefixtemp " + prefixTemp);
+        //System.out.println("Prefixtemp2 " + prefixTemp2);
+        
         
         if(prefixTemp.isEmpty()&&hasilList.isEmpty()){
             
-            this.cekSufiks(hasil, suf);
-            
-            if(hasilList.isEmpty()){
-                try {
-                    String kataUlang = new Parser().cekPengulangan(kataTanpaAkhiran);
+            if(hasil.contains("-")){
+                String[] cekDepanBelakang = hasil.split("-");
+                if(cekDepanBelakang[0].length()==cekDepanBelakang[1].length()){
+                    String kataUlang="";
+                    try {
+                        kataUlang = new Parser().cekPengulangan(hasil);
+                    } catch (IOException ex) {
+                        Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                     if(!kataUlang.isEmpty()){
                         
                         hasilList.add(kataUlang);
                         return hasilList;
                     }
-                } catch (IOException ex) {
-                    Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                else{
+                   this.cekSufiks(hasil, suf);   
                 }
             }
-        }
+            else{
+                this.cekSufiks(hasil, suf);                
+            }
+        
           
 
         //boolean tandaBreak = false;
