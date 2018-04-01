@@ -74,8 +74,8 @@ public class Tester {
         ArrayList[] preArr = {pref1, pref2, pref3, pref4, pref5, pref6};
         MorphologicalParser parser = new MorphologicalParser(preArr,suf,inf);
         BufferedReader inputtext=new BufferedReader(new InputStreamReader(new FileInputStream("inputantext.txt")));
-       //Scanner sc=new Scanner(inputtext);
-       Scanner sc=new Scanner(System.in);
+       Scanner sc=new Scanner(inputtext);
+       //Scanner sc=new Scanner(System.in);
        
        ArrayList<String> hasilPenelusuran = new ArrayList<String>();
         while(sc.hasNextLine()){
