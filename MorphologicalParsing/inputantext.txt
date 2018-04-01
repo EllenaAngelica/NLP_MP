@@ -1,12 +1,21 @@
-Beberapa contoh kasus kata-kata yang berulang adalah sayur-mayur dan kura-kura.
+Kura-kura yang terancam punah diperdagangkan di Indonesia
 
-Contoh di atas adalah string multiline. Dalam string multiline, karakter newline diikutkan sebagai bagian dari string. Kamu tidak perlu menggunakan karakter escape /n. Dengan demikian, untuk teks yang cukup panjang kode lebih mudah dibaca.
+Kura-kura merupakan binatang yang sering dihadiahkan orang tua kepada anaknya karena cantik, lucu dan jinak -tetapi tunggu: jangan-jangan Anda menghadiahkan hewan yang terlarang kepada anak Anda.
+Laporan sebuah organisasi lingkungan, TRAFFIC, mengungkap bahwa ribuan kura-kura darat dan air tawar yang terancam punah diperdagangkan di Jakarta dan beberapa di antaranya bukan merupakan spesies asli Indonesia.
+Terungkap, delapan spesies yang ditemukan dalam survei mereka tahun 2015 merupakan hewan yang dilarang untuk diperdagangkan secara internasional berdasarkan CITES (Konvensi Internasional Perdagangan Spesies Flora dan Fauna Liar yang Terancam Punah).
+"Jika pihak berwajib tidak menindak perdagangan ini dan pasar-pasar terbuka yang memperdagangkan spesies tersebut secara ilegal sebagai prioritas aksi penegakan hukum, maka banyak spesies-spesies yang saat ini terancam akan makin terdesak menuju kepunahan," kata Kanitha Krishnasamy, pejabat sementara direktur regional TRAFFIC di Asia Tenggara.
 
-Variabel Konstan
+Laporan berjudul 'Perlahan tapi Pasti: Jejak Global dari Perdagangan Kura-kura Darat dan Air Tawar di Jakarta' itu diterbitkan Senin (26/3).
+Sebagian besar spesies yang ditemukan bukan merupakan asli dari Indonesia dan diperkirakan diimpor secara illegal. Dalam survei selama empat bulan pada 2015, peneliti menemukan 4.985 kura-kura darat dan air tawar dari 65 spesies yang berbeda.
+Hampir separuh dari spesies itu masuk kategori terancam punah berdasarkan Daftar Merah Spesies yang Terancam Punah dari International Union for Conservation of Nature IUCN.
+Penemuan itu menunjukkan perdagangan kura-kura darat dan air tawar di Jakarta meningkat, dibandingkan dengan hasil survei TRAFFIC pada tahun 2004 dan 2010, yaitu 92 sampai 983 ekor hewan yang teramati diperdagangkan setiap minggunya.
 
-Semua huruf pada nama variabel HANGMANPICS ditulis dalam huruf kapital. Hal ini merupakan konvensi penulisan variabel konstan. Variabel konstan adalah variabel yang dibuat supaya nilainya tidak pernah berubah. Meskipun, kamu bisa tetap merubah isi HANGMANPICS, seperti variabel lainnya, penulisannya dengan huruf kapital akan menginginkanmu supaya jangan melakukannya. Karena variabel HANGMANPICS tidak pernah harus diubah, maka kita menandainya sebagai suatu konstan.
-Seperti konvensi lainnya, kamu tidak perlu mengikutinya. Namun, mengikuti konvensi ini akan mempermudah programmer lain membaca kodemu.
+Spesies yang terancam punah dan bukan asli Indonesia yang masih diperdagangkan itu antara lain kura-kura Yniphora Astrochelys yniphora dan Kura-kura Radiata Astrochelys.
+Keduanya merupakan spesies endemik dari Madagaskar dan terdaftar dalam CITES sebagai hewan yang dilarang diperdagangkan sejak tahun 1975.
+Selain itu, dalam survei TRAFFIC juga menemukan spesies kura-kura bukan asli Indonesia yang diperdagangkan di Jakarta yaitu kura-kura India Star Geochelone elegans, yang berasal dari Asia Selatan dan telah dilarang untuk ditangkap dan diperdagangkan di negara asalnya.
+Namun spesies yang bukan asli Indonesia tidak terlindungi secara hukum. TRAFFIC merekomendasikan agar revisi undang-undang tentang perlindungan satwa juga memasukan spesies-spesies bukan asli Indonesia yang terdaftar dalam CITES, agar dapat dilakukan penegakan hukum.
+"Agar kesepakatan internasional seperti CITES bisa efektif, Indonesia harus bergerak untuk melindungi bukan hanya spesies-spesies asli, tapi juga spesies-spesies yang bukan asli Indonesia, terutama yang berulang kali ditemukan diselundupkan masuk ke Indonesia," tutur Krishnasamy.
 
-Tipe Data list
+Pemerintah Indonesia tengah merevisi hukum perlindungan satwa dan tumbuhan liar (Undang-undang No.5 tahun 1990) dan daftar jenis-jenis tumbuhan dan satwa yang dilindungi (Peraturan Pemerintah No.7 tahun 1999).
 
-Tipe data list adalah tipe data yang nilainya dapat mengandung beberapa nilai lain. Coba masukkan kode ini dalam shell interaktif:
+Pekan lalu, pakar lingkungan berkumpul dalam Workshop Tortoise and Freshwater Turtle IUCN Red List untuk mengkaji status dari 90 spesies kura-kura darat dan air tawar di Asia Tenggara, termasuk 20 spesies yang dapat ditemukan di Indonesia.

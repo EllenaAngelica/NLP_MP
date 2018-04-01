@@ -1,146 +1,455 @@
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: yang kata dasar: yang
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah kata dasar: punah
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: di kata dasar: di
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: merupakan kata dasar: rupa
+Kata awal: binatang kata dasar: binatang | natang
+Kata awal: yang kata dasar: yang
+Kata awal: sering kata dasar: sering | ring
+Kata awal: dihadiahkan kata dasar: hadiah
+Kata awal: orang kata dasar: orang
+Kata awal: tua kata dasar: tua
+Kata awal: kepada kata dasar: kepada | pada
+Kata awal: anaknya kata dasar: nak | anak
+Kata awal: karena kata dasar: karena
+Kata awal: cantik, kata dasar: cantik
+Kata awal: lucu kata dasar: lucu
+Kata awal: dan kata dasar: dan
+Kata awal: jinak kata dasar: jinak
+Kata awal: -tetapi kata dasar: 
+Kata awal: tunggu: kata dasar: tunggu
+Kata awal: jangan-jangan kata dasar: jangan kata ulang penuh 
+Kata awal: anda kata dasar: anda
+Kata awal: menghadiahkan kata dasar: hadiah
+Kata awal: hewan kata dasar: hewan
+Kata awal: yang kata dasar: yang
+Kata awal: terlarang kata dasar: larang
+Kata awal: kepada kata dasar: kepada | pada
+Kata awal: anak kata dasar: anak | nak
+Kata awal: anda. kata dasar: anda
+Kata awal: laporan kata dasar: lapor
+Kata awal: sebuah kata dasar: buah
+Kata awal: organisasi kata dasar: organisasi | organ | organis
+Kata awal: lingkungan, kata dasar: lingkung
+Kata awal: traffic, kata dasar: 
+Kata awal: mengungkap kata dasar: ungkap
+Kata awal: bahwa kata dasar: bahwa
+Kata awal: ribuan kata dasar: ribu
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: darat kata dasar: darat
+Kata awal: dan kata dasar: dan
+Kata awal: air kata dasar: air
+Kata awal: tawar kata dasar: 
+Kata awal: yang kata dasar: yang
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah kata dasar: punah
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: di kata dasar: di
+Kata awal: jakarta kata dasar: 
+Kata awal: dan kata dasar: dan
 Kata awal: beberapa kata dasar: beberapa | apa
-Kata awal: contoh kata dasar: contoh
-Kata awal: kasus kata dasar: kasus
-Kata awal: kata-kata kata dasar: kata kata ulang penuh 
+Kata awal: di kata dasar: di
+Kata awal: antaranya kata dasar: antara
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: merupakan kata dasar: rupa
+Kata awal: spesies kata dasar: spesies
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia. kata dasar: indonesia
+Kata awal: terungkap, kata dasar: ungkap
+Kata awal: delapan kata dasar: delapan | lap | delap
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: ditemukan kata dasar: temu
+Kata awal: dalam kata dasar: dalam
+Kata awal: survei kata dasar: survei
+Kata awal: mereka kata dasar: mereka | reka
+Kata awal: tahun kata dasar: tahun
+Kata awal: 2015 kata dasar: 
+Kata awal: merupakan kata dasar: rupa
+Kata awal: hewan kata dasar: hewan
+Kata awal: yang kata dasar: yang
+Kata awal: dilarang kata dasar: larang
+Kata awal: untuk kata dasar: untuk
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: secara kata dasar: cara
+Kata awal: internasional kata dasar: internasional | nasional | nasion
+Kata awal: berdasarkan kata dasar: dasar
+Kata awal: cites kata dasar: 
+Kata awal: (konvensi kata dasar: konvensi
+Kata awal: internasional kata dasar: internasional | nasional | nasion
+Kata awal: perdagangan kata dasar: dagang
+Kata awal: spesies kata dasar: spesies
+Kata awal: flora kata dasar: flora
+Kata awal: dan kata dasar: dan
+Kata awal: fauna kata dasar: fauna
+Kata awal: liar kata dasar: liar
+Kata awal: yang kata dasar: yang
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah). kata dasar: punah
+Kata awal: "jika kata dasar: jika
+Kata awal: pihak kata dasar: pihak
+Kata awal: berwajib kata dasar: wajib
+Kata awal: tidak kata dasar: tidak
+Kata awal: menindak kata dasar: tindak
+Kata awal: perdagangan kata dasar: dagang
+Kata awal: ini kata dasar: ini
+Kata awal: dan kata dasar: dan
+Kata awal: pasar-pasar kata dasar: pasar kata ulang penuh 
+Kata awal: terbuka kata dasar: buka
+Kata awal: yang kata dasar: yang
+Kata awal: memperdagangkan kata dasar: dagang
+Kata awal: spesies kata dasar: spesies
+Kata awal: tersebut kata dasar: sebut
+Kata awal: secara kata dasar: cara
+Kata awal: ilegal kata dasar: ilegal
+Kata awal: sebagai kata dasar: bagai
+Kata awal: prioritas kata dasar: prioritas
+Kata awal: aksi kata dasar: aksi | ksi
+Kata awal: penegakan kata dasar: tega | tegak
+Kata awal: hukum, kata dasar: hukum
+Kata awal: maka kata dasar: maka
+Kata awal: banyak kata dasar: banyak
+Kata awal: spesies-spesies kata dasar: spesies kata ulang penuh 
+Kata awal: yang kata dasar: yang
+Kata awal: saat kata dasar: saat
+Kata awal: ini kata dasar: ini
+Kata awal: terancam kata dasar: ancam
+Kata awal: akan kata dasar: akan | kan
+Kata awal: makin kata dasar: makin | mak
+Kata awal: terdesak kata dasar: desak
+Kata awal: menuju kata dasar: uju | tuju
+Kata awal: kepunahan," kata dasar: punah
+Kata awal: kata kata dasar: kata
+Kata awal: kanitha kata dasar: 
+Kata awal: krishnasamy, kata dasar: 
+Kata awal: pejabat kata dasar: jabat
+Kata awal: sementara kata dasar: sementara
+Kata awal: direktur kata dasar: direktur
+Kata awal: regional kata dasar: regional | region
+Kata awal: traffic kata dasar: 
+Kata awal: di kata dasar: di
+Kata awal: asia kata dasar: sia
+Kata awal: tenggara. kata dasar: tenggara
+Kata awal: laporan kata dasar: lapor
+Kata awal: berjudul kata dasar: judul
+Kata awal: 'perlahan kata dasar: perlahan | lahan | lah
+Kata awal: tapi kata dasar: tapi | tap
+Kata awal: pasti: kata dasar: pasti
+Kata awal: jejak kata dasar: jejak
+Kata awal: global kata dasar: global
+Kata awal: dari kata dasar: dari | dar
+Kata awal: perdagangan kata dasar: dagang
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: darat kata dasar: darat
+Kata awal: dan kata dasar: dan
+Kata awal: air kata dasar: air
+Kata awal: tawar kata dasar: 
+Kata awal: di kata dasar: di
+Kata awal: jakarta' kata dasar: 
+Kata awal: itu kata dasar: itu
+Kata awal: diterbitkan kata dasar: terbit
+Kata awal: senin kata dasar: senin | sen
+Kata awal: (26/3). kata dasar: 
+Kata awal: sebagian kata dasar: bagi
+Kata awal: besar kata dasar: besar
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: ditemukan kata dasar: temu
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: merupakan kata dasar: rupa
+Kata awal: asli kata dasar: asli
+Kata awal: dari kata dasar: dari | dar
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: dan kata dasar: dan
+Kata awal: diperkirakan kata dasar: kira
+Kata awal: diimpor kata dasar: impor
+Kata awal: secara kata dasar: cara
+Kata awal: illegal. kata dasar: 
+Kata awal: dalam kata dasar: dalam
+Kata awal: survei kata dasar: survei
+Kata awal: selama kata dasar: lama
+Kata awal: empat kata dasar: empat
+Kata awal: bulan kata dasar: bulan
+Kata awal: pada kata dasar: pada
+Kata awal: 2015, kata dasar: 
+Kata awal: peneliti kata dasar: teliti
+Kata awal: menemukan kata dasar: temu
+Kata awal: 4.985 kata dasar: 
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: darat kata dasar: darat
+Kata awal: dan kata dasar: dan
+Kata awal: air kata dasar: air
+Kata awal: tawar kata dasar: 
+Kata awal: dari kata dasar: dari | dar
+Kata awal: 65 kata dasar: 
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: berbeda. kata dasar: beda
+Kata awal: hampir kata dasar: hampir
+Kata awal: separuh kata dasar: paruh
+Kata awal: dari kata dasar: dari | dar
+Kata awal: spesies kata dasar: spesies
+Kata awal: itu kata dasar: itu
+Kata awal: masuk kata dasar: masuk
+Kata awal: kategori kata dasar: kategori
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah kata dasar: punah
+Kata awal: berdasarkan kata dasar: dasar
+Kata awal: daftar kata dasar: daftar
+Kata awal: merah kata dasar: merah
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah kata dasar: punah
+Kata awal: dari kata dasar: dari | dar
+Kata awal: international kata dasar: 
+Kata awal: union kata dasar: union
+Kata awal: for kata dasar: 
+Kata awal: conservation kata dasar: 
+Kata awal: of kata dasar: 
+Kata awal: nature kata dasar: 
+Kata awal: iucn. kata dasar: 
+Kata awal: penemuan kata dasar: temu
+Kata awal: itu kata dasar: itu
+Kata awal: menunjukkan kata dasar: unjuk | tunjuk
+Kata awal: perdagangan kata dasar: dagang
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: darat kata dasar: darat
+Kata awal: dan kata dasar: dan
+Kata awal: air kata dasar: air
+Kata awal: tawar kata dasar: 
+Kata awal: di kata dasar: di
+Kata awal: jakarta kata dasar: 
+Kata awal: meningkat, kata dasar: tingkat
+Kata awal: dibandingkan kata dasar: banding
+Kata awal: dengan kata dasar: dengan
+Kata awal: hasil kata dasar: hasil | has
+Kata awal: survei kata dasar: survei
+Kata awal: traffic kata dasar: 
+Kata awal: pada kata dasar: pada
+Kata awal: tahun kata dasar: tahun
+Kata awal: 2004 kata dasar: 
+Kata awal: dan kata dasar: dan
+Kata awal: 2010, kata dasar: 
+Kata awal: yaitu kata dasar: yaitu
+Kata awal: 92 kata dasar: 
+Kata awal: sampai kata dasar: sampai | sampa
+Kata awal: 983 kata dasar: 
+Kata awal: ekor kata dasar: ekor
+Kata awal: hewan kata dasar: hewan
+Kata awal: yang kata dasar: yang
+Kata awal: teramati kata dasar: amat
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: setiap kata dasar: tiap
+Kata awal: minggunya. kata dasar: minggu
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: terancam kata dasar: ancam
+Kata awal: punah kata dasar: punah
+Kata awal: dan kata dasar: dan
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: yang kata dasar: yang
+Kata awal: masih kata dasar: masih
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: itu kata dasar: itu
+Kata awal: antara kata dasar: antara
+Kata awal: lain kata dasar: lain
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: yniphora kata dasar: 
+Kata awal: astrochelys kata dasar: 
+Kata awal: yniphora kata dasar: 
+Kata awal: dan kata dasar: dan
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: radiata kata dasar: 
+Kata awal: astrochelys. kata dasar: 
+Kata awal: keduanya kata dasar: dua
+Kata awal: merupakan kata dasar: rupa
+Kata awal: spesies kata dasar: spesies
+Kata awal: endemik kata dasar: 
+Kata awal: dari kata dasar: dari | dar
+Kata awal: madagaskar kata dasar: 
+Kata awal: dan kata dasar: dan
+Kata awal: terdaftar kata dasar: daftar
+Kata awal: dalam kata dasar: dalam
+Kata awal: cites kata dasar: 
+Kata awal: sebagai kata dasar: bagai
+Kata awal: hewan kata dasar: hewan
+Kata awal: yang kata dasar: yang
+Kata awal: dilarang kata dasar: larang
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: sejak kata dasar: sejak
+Kata awal: tahun kata dasar: tahun
+Kata awal: 1975. kata dasar: 
+Kata awal: selain kata dasar: selain | lain | sela
+Kata awal: itu, kata dasar: itu
+Kata awal: dalam kata dasar: dalam
+Kata awal: survei kata dasar: survei
+Kata awal: traffic kata dasar: 
+Kata awal: juga kata dasar: juga
+Kata awal: menemukan kata dasar: temu
+Kata awal: spesies kata dasar: spesies
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: yang kata dasar: yang
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: di kata dasar: di
+Kata awal: jakarta kata dasar: 
+Kata awal: yaitu kata dasar: yaitu
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: india kata dasar: dia
+Kata awal: star kata dasar: 
+Kata awal: geochelone kata dasar: 
+Kata awal: elegans, kata dasar: 
+Kata awal: yang kata dasar: yang
+Kata awal: berasal kata dasar: asal | ras | beras
+Kata awal: dari kata dasar: dari | dar
+Kata awal: asia kata dasar: sia
+Kata awal: selatan kata dasar: selatan | lat | selat
+Kata awal: dan kata dasar: dan
+Kata awal: telah kata dasar: telah
+Kata awal: dilarang kata dasar: larang
+Kata awal: untuk kata dasar: untuk
+Kata awal: ditangkap kata dasar: tangkap
+Kata awal: dan kata dasar: dan
+Kata awal: diperdagangkan kata dasar: dagang
+Kata awal: di kata dasar: di
+Kata awal: negara kata dasar: negara
+Kata awal: asalnya. kata dasar: sal | asal
+Kata awal: namun kata dasar: namun
+Kata awal: spesies kata dasar: spesies
+Kata awal: yang kata dasar: yang
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: tidak kata dasar: tidak
+Kata awal: terlindungi kata dasar: lindung
+Kata awal: secara kata dasar: cara
+Kata awal: hukum. kata dasar: hukum
+Kata awal: traffic kata dasar: 
+Kata awal: merekomendasikan kata dasar: rekomendasi
+Kata awal: agar kata dasar: agar | gar
+Kata awal: revisi kata dasar: revisi
+Kata awal: undang-undang kata dasar: undang-undang kata ulang semu 
+Kata awal: tentang kata dasar: tentang
+Kata awal: perlindungan kata dasar: lindung
+Kata awal: satwa kata dasar: satwa
+Kata awal: juga kata dasar: juga
+Kata awal: memasukan kata dasar: asu | pasu | pasuk | masuk
+Kata awal: spesies-spesies kata dasar: spesies kata ulang penuh 
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: yang kata dasar: yang
+Kata awal: terdaftar kata dasar: daftar
+Kata awal: dalam kata dasar: dalam
+Kata awal: cites, kata dasar: 
+Kata awal: agar kata dasar: agar | gar
+Kata awal: dapat kata dasar: dapat
+Kata awal: dilakukan kata dasar: laku
+Kata awal: penegakan kata dasar: tega | tegak
+Kata awal: hukum. kata dasar: hukum
+Kata awal: "agar kata dasar: agar | gar
+Kata awal: kesepakatan kata dasar: sepakat
+Kata awal: internasional kata dasar: internasional | nasional | nasion
+Kata awal: seperti kata dasar: seperti
+Kata awal: cites kata dasar: 
+Kata awal: bisa kata dasar: bisa
+Kata awal: efektif, kata dasar: efektif
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: harus kata dasar: harus
+Kata awal: bergerak kata dasar: gerak
+Kata awal: untuk kata dasar: untuk
+Kata awal: melindungi kata dasar: lindung
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: hanya kata dasar: hanya
+Kata awal: spesies-spesies kata dasar: spesies kata ulang penuh 
+Kata awal: asli, kata dasar: asli
+Kata awal: tapi kata dasar: tapi | tap
+Kata awal: juga kata dasar: juga
+Kata awal: spesies-spesies kata dasar: spesies kata ulang penuh 
+Kata awal: yang kata dasar: yang
+Kata awal: bukan kata dasar: bukan | buk
+Kata awal: asli kata dasar: asli
+Kata awal: indonesia, kata dasar: indonesia
+Kata awal: terutama kata dasar: utama
 Kata awal: yang kata dasar: yang
 Kata awal: berulang kata dasar: ulang
-Kata awal: adalah kata dasar: adalah | ada
-Kata awal: sayur-mayur kata dasar: sayur kata ulang berubah bunyi 
+Kata awal: kali kata dasar: kali | kal
+Kata awal: ditemukan kata dasar: temu
+Kata awal: diselundupkan kata dasar: selundup
+Kata awal: masuk kata dasar: masuk
+Kata awal: ke kata dasar: ke
+Kata awal: indonesia," kata dasar: indonesia
+Kata awal: tutur kata dasar: tutur
+Kata awal: krishnasamy. kata dasar: 
+Kata awal: pemerintah kata dasar: perintah
+Kata awal: indonesia kata dasar: indonesia
+Kata awal: tengah kata dasar: tengah
+Kata awal: merevisi kata dasar: revisi
+Kata awal: hukum kata dasar: hukum
+Kata awal: perlindungan kata dasar: lindung
+Kata awal: satwa kata dasar: satwa
 Kata awal: dan kata dasar: dan
-Kata awal: kura-kura. kata dasar: kura-kura kata ulang semu 
-Kata awal: contoh kata dasar: contoh
-Kata awal: di kata dasar: di
-Kata awal: atas kata dasar: atas | tas
-Kata awal: adalah kata dasar: adalah | ada
-Kata awal: string kata dasar: 
-Kata awal: multiline. kata dasar: 
+Kata awal: tumbuhan kata dasar: tumbuh
+Kata awal: liar kata dasar: liar
+Kata awal: (undang-undang kata dasar: undang-undang kata ulang semu 
+Kata awal: no.5 kata dasar: 
+Kata awal: tahun kata dasar: tahun
+Kata awal: 1990) kata dasar: 
+Kata awal: dan kata dasar: dan
+Kata awal: daftar kata dasar: daftar
+Kata awal: jenis-jenis kata dasar: jenis kata ulang penuh 
+Kata awal: tumbuhan kata dasar: tumbuh
+Kata awal: dan kata dasar: dan
+Kata awal: satwa kata dasar: satwa
+Kata awal: yang kata dasar: yang
+Kata awal: dilindungi kata dasar: lindung
+Kata awal: (peraturan kata dasar: atur
+Kata awal: pemerintah kata dasar: perintah
+Kata awal: no.7 kata dasar: 
+Kata awal: tahun kata dasar: tahun
+Kata awal: 1999). kata dasar: 
+Kata awal: pekan kata dasar: pekan | kan | pek
+Kata awal: lalu, kata dasar: lalu
+Kata awal: pakar kata dasar: pakar
+Kata awal: lingkungan kata dasar: lingkung
+Kata awal: berkumpul kata dasar: kumpul
 Kata awal: dalam kata dasar: dalam
-Kata awal: string kata dasar: 
-Kata awal: multiline, kata dasar: 
-Kata awal: karakter kata dasar: karakter
-Kata awal: newline kata dasar: 
-Kata awal: diikutkan kata dasar: ikut
-Kata awal: sebagai kata dasar: bagai
-Kata awal: bagian kata dasar: bagi
-Kata awal: dari kata dasar: dari | dar
-Kata awal: string. kata dasar: 
-Kata awal: kamu kata dasar: kamu
-Kata awal: tidak kata dasar: tidak
-Kata awal: perlu kata dasar: perlu
-Kata awal: menggunakan kata dasar: guna
-Kata awal: karakter kata dasar: karakter
-Kata awal: escape kata dasar: 
-Kata awal: /n. kata dasar: n
-Kata awal: dengan kata dasar: dengan
-Kata awal: demikian, kata dasar: demikian
+Kata awal: workshop kata dasar: 
+Kata awal: tortoise kata dasar: 
+Kata awal: and kata dasar: 
+Kata awal: freshwater kata dasar: 
+Kata awal: turtle kata dasar: 
+Kata awal: iucn kata dasar: 
+Kata awal: red kata dasar: 
+Kata awal: list kata dasar: 
 Kata awal: untuk kata dasar: untuk
-Kata awal: teks kata dasar: teks
+Kata awal: mengkaji kata dasar: kaji
+Kata awal: status kata dasar: status
+Kata awal: dari kata dasar: dari | dar
+Kata awal: 90 kata dasar: 
+Kata awal: spesies kata dasar: spesies
+Kata awal: kura-kura kata dasar: kura-kura kata ulang semu 
+Kata awal: darat kata dasar: darat
+Kata awal: dan kata dasar: dan
+Kata awal: air kata dasar: air
+Kata awal: tawar kata dasar: 
+Kata awal: di kata dasar: di
+Kata awal: asia kata dasar: sia
+Kata awal: tenggara, kata dasar: tenggara
+Kata awal: termasuk kata dasar: masuk
+Kata awal: 20 kata dasar: 
+Kata awal: spesies kata dasar: spesies
 Kata awal: yang kata dasar: yang
-Kata awal: cukup kata dasar: cukup
-Kata awal: panjang kata dasar: panjang
-Kata awal: kode kata dasar: kode
-Kata awal: lebih kata dasar: lebih
-Kata awal: mudah kata dasar: mudah
-Kata awal: dibaca. kata dasar: baca
-Kata awal: variabel kata dasar: variabel
-Kata awal: konstan kata dasar: konstan
-Kata awal: semua kata dasar: semua | mua
-Kata awal: huruf kata dasar: huruf
-Kata awal: pada kata dasar: pada
-Kata awal: nama kata dasar: nama
-Kata awal: variabel kata dasar: variabel
-Kata awal: hangmanpics kata dasar: 
-Kata awal: ditulis kata dasar: tulis
-Kata awal: dalam kata dasar: dalam
-Kata awal: huruf kata dasar: huruf
-Kata awal: kapital. kata dasar: kapital | kapit
-Kata awal: hal kata dasar: hal
-Kata awal: ini kata dasar: ini
-Kata awal: merupakan kata dasar: rupa
-Kata awal: konvensi kata dasar: konvensi
-Kata awal: penulisan kata dasar: tulis
-Kata awal: variabel kata dasar: variabel
-Kata awal: konstan. kata dasar: konstan
-Kata awal: variabel kata dasar: variabel
-Kata awal: konstan kata dasar: konstan
-Kata awal: adalah kata dasar: adalah | ada
-Kata awal: variabel kata dasar: variabel
-Kata awal: yang kata dasar: yang
-Kata awal: dibuat kata dasar: buat
-Kata awal: supaya kata dasar: supaya
-Kata awal: nilainya kata dasar: nilai
-Kata awal: tidak kata dasar: tidak
-Kata awal: pernah kata dasar: pernah | nah
-Kata awal: berubah. kata dasar: ubah
-Kata awal: meskipun, kata dasar: 
-Kata awal: kamu kata dasar: kamu
-Kata awal: bisa kata dasar: bisa
-Kata awal: tetap kata dasar: tetap
-Kata awal: merubah kata dasar: rubah
-Kata awal: isi kata dasar: isi
-Kata awal: hangmanpics, kata dasar: 
-Kata awal: seperti kata dasar: seperti
-Kata awal: variabel kata dasar: variabel
-Kata awal: lainnya, kata dasar: lain
-Kata awal: penulisannya kata dasar: 
-Kata awal: dengan kata dasar: dengan
-Kata awal: huruf kata dasar: huruf
-Kata awal: kapital kata dasar: kapital | kapit
-Kata awal: akan kata dasar: akan | kan
-Kata awal: menginginkanmu kata dasar: 
-Kata awal: supaya kata dasar: supaya
-Kata awal: jangan kata dasar: jangan
-Kata awal: melakukannya. kata dasar: 
-Kata awal: karena kata dasar: karena
-Kata awal: variabel kata dasar: variabel
-Kata awal: hangmanpics kata dasar: 
-Kata awal: tidak kata dasar: tidak
-Kata awal: pernah kata dasar: pernah | nah
-Kata awal: harus kata dasar: harus
-Kata awal: diubah, kata dasar: ubah
-Kata awal: maka kata dasar: maka
-Kata awal: kita kata dasar: kita
-Kata awal: menandainya kata dasar: andai
-Kata awal: sebagai kata dasar: bagai
-Kata awal: suatu kata dasar: suatu
-Kata awal: konstan. kata dasar: konstan
-Kata awal: seperti kata dasar: seperti
-Kata awal: konvensi kata dasar: konvensi
-Kata awal: lainnya, kata dasar: lain
-Kata awal: kamu kata dasar: kamu
-Kata awal: tidak kata dasar: tidak
-Kata awal: perlu kata dasar: perlu
-Kata awal: mengikutinya. kata dasar: 
-Kata awal: namun, kata dasar: namun
-Kata awal: mengikuti kata dasar: ikut
-Kata awal: konvensi kata dasar: konvensi
-Kata awal: ini kata dasar: ini
-Kata awal: akan kata dasar: akan | kan
-Kata awal: mempermudah kata dasar: mudah
-Kata awal: programmer kata dasar: 
-Kata awal: lain kata dasar: lain
-Kata awal: membaca kata dasar: baca
-Kata awal: kodemu. kata dasar: mu
-Kata awal: tipe kata dasar: tipe
-Kata awal: data kata dasar: data
-Kata awal: list kata dasar: 
-Kata awal: tipe kata dasar: tipe
-Kata awal: data kata dasar: data
-Kata awal: list kata dasar: 
-Kata awal: adalah kata dasar: adalah | ada
-Kata awal: tipe kata dasar: tipe
-Kata awal: data kata dasar: data
-Kata awal: yang kata dasar: yang
-Kata awal: nilainya kata dasar: nilai
 Kata awal: dapat kata dasar: dapat
-Kata awal: mengandung kata dasar: gandung | kandung
-Kata awal: beberapa kata dasar: beberapa | apa
-Kata awal: nilai kata dasar: nilai | nila
-Kata awal: lain. kata dasar: lain
-Kata awal: coba kata dasar: coba
-Kata awal: masukkan kata dasar: masuk
-Kata awal: kode kata dasar: kode
-Kata awal: ini kata dasar: ini
-Kata awal: dalam kata dasar: dalam
-Kata awal: shell kata dasar: 
-Kata awal: interaktif: kata dasar: interaktif | aktif
+Kata awal: ditemukan kata dasar: temu
+Kata awal: di kata dasar: di
+Kata awal: indonesia. kata dasar: indonesia
