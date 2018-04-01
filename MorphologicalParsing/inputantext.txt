@@ -1,5 +1,6 @@
+Beberapa contoh kasus kata-kata yang berulang adalah sayur-mayur dan kura-kura.
 
-Contoh di atas adalah string multiline. Dalam string multiline, karakter newline diikutkan sebagai bagian dari string. Kamu tidak perlu menggunakan karakter escape n. Dengan demikian, untuk teks yang cukup panjang kode lebih mudah dibaca.
+Contoh di atas adalah string multiline. Dalam string multiline, karakter newline diikutkan sebagai bagian dari string. Kamu tidak perlu menggunakan karakter escape /n. Dengan demikian, untuk teks yang cukup panjang kode lebih mudah dibaca.
 
 Variabel Konstan
 
