@@ -39,7 +39,7 @@ public class Tester {
         while ((line = csvReader.readLine()) != null) {
 
                 // use comma as separator
-                String in = line.substring(0,line.lastIndexOf(","));
+                String in = line;
                 //System.out.println(in);
                 
                 
@@ -89,8 +89,8 @@ public class Tester {
         //MorphologicalParser parser = new MorphologicalParser(pref,suf);
         MorphologicalParser parser = new MorphologicalParser(preArr,suf);
         BufferedReader inputtext=new BufferedReader(new InputStreamReader(new FileInputStream("inputantext.txt")));
-       //Scanner sc=new Scanner(inputtext);
-       Scanner sc=new Scanner(System.in);
+       Scanner sc=new Scanner(inputtext);
+       //Scanner sc=new Scanner(System.in);
        
        ArrayList<String> hasilPenelusuran = new ArrayList<String>();
         while(sc.hasNext()){
@@ -111,14 +111,14 @@ public class Tester {
                     simbol="";
                 }
                 kataAwal+=result.get(i)+simbol;
-                System.out.println(result.get(i));
+                //System.out.println(result.get(i));
             }
             result.clear();
             hasilPenelusuran.add(kataAwal);
             //System.out.println(Trie.getInstance().search(result));
         }
         
-        /*
+        
             File newTextFile = new File("hasilparser.txt");
             
             FileWriter fw = new FileWriter(newTextFile);
@@ -129,7 +129,7 @@ public class Tester {
             }
             
             
-            fw.close();*/
+            fw.close();
     }
     private static String hilangkanSimbol(String input){
         String output=input;
