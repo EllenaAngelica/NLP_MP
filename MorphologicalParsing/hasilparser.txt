@@ -1,0 +1,146 @@
+Kata awal: beberapa kata dasar: beberapa | apa
+Kata awal: contoh kata dasar: contoh
+Kata awal: kasus kata dasar: kasus
+Kata awal: kata-kata kata dasar: kata kata ulang penuh 
+Kata awal: yang kata dasar: yang
+Kata awal: berulang kata dasar: ulang
+Kata awal: adalah kata dasar: adalah | ada
+Kata awal: sayur-mayur kata dasar: sayur kata ulang berubah bunyi 
+Kata awal: dan kata dasar: dan
+Kata awal: kura-kura. kata dasar: kura-kura kata ulang semu 
+Kata awal: contoh kata dasar: contoh
+Kata awal: di kata dasar: di
+Kata awal: atas kata dasar: atas | tas
+Kata awal: adalah kata dasar: adalah | ada
+Kata awal: string kata dasar: 
+Kata awal: multiline. kata dasar: 
+Kata awal: dalam kata dasar: dalam
+Kata awal: string kata dasar: 
+Kata awal: multiline, kata dasar: 
+Kata awal: karakter kata dasar: karakter
+Kata awal: newline kata dasar: 
+Kata awal: diikutkan kata dasar: ikut
+Kata awal: sebagai kata dasar: bagai
+Kata awal: bagian kata dasar: bagi
+Kata awal: dari kata dasar: dari | dar
+Kata awal: string. kata dasar: 
+Kata awal: kamu kata dasar: kamu
+Kata awal: tidak kata dasar: tidak
+Kata awal: perlu kata dasar: perlu
+Kata awal: menggunakan kata dasar: guna
+Kata awal: karakter kata dasar: karakter
+Kata awal: escape kata dasar: 
+Kata awal: /n. kata dasar: n
+Kata awal: dengan kata dasar: dengan
+Kata awal: demikian, kata dasar: demikian
+Kata awal: untuk kata dasar: untuk
+Kata awal: teks kata dasar: teks
+Kata awal: yang kata dasar: yang
+Kata awal: cukup kata dasar: cukup
+Kata awal: panjang kata dasar: panjang
+Kata awal: kode kata dasar: kode
+Kata awal: lebih kata dasar: lebih
+Kata awal: mudah kata dasar: mudah
+Kata awal: dibaca. kata dasar: baca
+Kata awal: variabel kata dasar: variabel
+Kata awal: konstan kata dasar: konstan
+Kata awal: semua kata dasar: semua | mua
+Kata awal: huruf kata dasar: huruf
+Kata awal: pada kata dasar: pada
+Kata awal: nama kata dasar: nama
+Kata awal: variabel kata dasar: variabel
+Kata awal: hangmanpics kata dasar: 
+Kata awal: ditulis kata dasar: tulis
+Kata awal: dalam kata dasar: dalam
+Kata awal: huruf kata dasar: huruf
+Kata awal: kapital. kata dasar: kapital | kapit
+Kata awal: hal kata dasar: hal
+Kata awal: ini kata dasar: ini
+Kata awal: merupakan kata dasar: rupa
+Kata awal: konvensi kata dasar: konvensi
+Kata awal: penulisan kata dasar: tulis
+Kata awal: variabel kata dasar: variabel
+Kata awal: konstan. kata dasar: konstan
+Kata awal: variabel kata dasar: variabel
+Kata awal: konstan kata dasar: konstan
+Kata awal: adalah kata dasar: adalah | ada
+Kata awal: variabel kata dasar: variabel
+Kata awal: yang kata dasar: yang
+Kata awal: dibuat kata dasar: buat
+Kata awal: supaya kata dasar: supaya
+Kata awal: nilainya kata dasar: nilai
+Kata awal: tidak kata dasar: tidak
+Kata awal: pernah kata dasar: pernah | nah
+Kata awal: berubah. kata dasar: ubah
+Kata awal: meskipun, kata dasar: 
+Kata awal: kamu kata dasar: kamu
+Kata awal: bisa kata dasar: bisa
+Kata awal: tetap kata dasar: tetap
+Kata awal: merubah kata dasar: rubah
+Kata awal: isi kata dasar: isi
+Kata awal: hangmanpics, kata dasar: 
+Kata awal: seperti kata dasar: seperti
+Kata awal: variabel kata dasar: variabel
+Kata awal: lainnya, kata dasar: lain
+Kata awal: penulisannya kata dasar: 
+Kata awal: dengan kata dasar: dengan
+Kata awal: huruf kata dasar: huruf
+Kata awal: kapital kata dasar: kapital | kapit
+Kata awal: akan kata dasar: akan | kan
+Kata awal: menginginkanmu kata dasar: 
+Kata awal: supaya kata dasar: supaya
+Kata awal: jangan kata dasar: jangan
+Kata awal: melakukannya. kata dasar: 
+Kata awal: karena kata dasar: karena
+Kata awal: variabel kata dasar: variabel
+Kata awal: hangmanpics kata dasar: 
+Kata awal: tidak kata dasar: tidak
+Kata awal: pernah kata dasar: pernah | nah
+Kata awal: harus kata dasar: harus
+Kata awal: diubah, kata dasar: ubah
+Kata awal: maka kata dasar: maka
+Kata awal: kita kata dasar: kita
+Kata awal: menandainya kata dasar: andai
+Kata awal: sebagai kata dasar: bagai
+Kata awal: suatu kata dasar: suatu
+Kata awal: konstan. kata dasar: konstan
+Kata awal: seperti kata dasar: seperti
+Kata awal: konvensi kata dasar: konvensi
+Kata awal: lainnya, kata dasar: lain
+Kata awal: kamu kata dasar: kamu
+Kata awal: tidak kata dasar: tidak
+Kata awal: perlu kata dasar: perlu
+Kata awal: mengikutinya. kata dasar: 
+Kata awal: namun, kata dasar: namun
+Kata awal: mengikuti kata dasar: ikut
+Kata awal: konvensi kata dasar: konvensi
+Kata awal: ini kata dasar: ini
+Kata awal: akan kata dasar: akan | kan
+Kata awal: mempermudah kata dasar: mudah
+Kata awal: programmer kata dasar: 
+Kata awal: lain kata dasar: lain
+Kata awal: membaca kata dasar: baca
+Kata awal: kodemu. kata dasar: mu
+Kata awal: tipe kata dasar: tipe
+Kata awal: data kata dasar: data
+Kata awal: list kata dasar: 
+Kata awal: tipe kata dasar: tipe
+Kata awal: data kata dasar: data
+Kata awal: list kata dasar: 
+Kata awal: adalah kata dasar: adalah | ada
+Kata awal: tipe kata dasar: tipe
+Kata awal: data kata dasar: data
+Kata awal: yang kata dasar: yang
+Kata awal: nilainya kata dasar: nilai
+Kata awal: dapat kata dasar: dapat
+Kata awal: mengandung kata dasar: gandung | kandung
+Kata awal: beberapa kata dasar: beberapa | apa
+Kata awal: nilai kata dasar: nilai | nila
+Kata awal: lain. kata dasar: lain
+Kata awal: coba kata dasar: coba
+Kata awal: masukkan kata dasar: masuk
+Kata awal: kode kata dasar: kode
+Kata awal: ini kata dasar: ini
+Kata awal: dalam kata dasar: dalam
+Kata awal: shell kata dasar: 
+Kata awal: interaktif: kata dasar: interaktif | aktif
