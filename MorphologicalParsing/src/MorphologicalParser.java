@@ -26,8 +26,8 @@ public class MorphologicalParser {
     ArrayList<String> pref6;
     ArrayList<String> suf;
     ArrayList<String> hasilList;
-    
-    String hasilTanpaAkhiran="";
+
+    String hasilTanpaAkhiran = "";
 
     public MorphologicalParser(ArrayList<String> pref, ArrayList<String> suf) {
         this.pref = pref;
@@ -84,7 +84,7 @@ public class MorphologicalParser {
         return (Trie.getInstance().search(s) && !hasilList.contains(s));
     }
 
-    public ArrayList<String> cekBerimbuhan(String input,int count) {
+    public ArrayList<String> cekBerimbuhan(String input, int count) {
         boolean ketemu = false;
         hasilList.clear();
         String in = input;
@@ -94,8 +94,8 @@ public class MorphologicalParser {
         String prefixTemp2 = "";
         String wordParse = "";
         String hasil = "";
-        
-        int counter=count;
+
+        int counter = count;
 
         String infix = "";
         String suffix = "";
@@ -207,7 +207,8 @@ public class MorphologicalParser {
                                 hasilList.add(temp2);
                             }
                             this.cekSufiks(temp2, suf);
-                        } /*else if (temp.substring(0, 1).equals("r")) {
+                        }
+                        /*else if (temp.substring(0, 1).equals("r")) {
                             prefix += "r";
                             if (cekLexicon(temp.substring(1))) {
                                 ketemu = true;
@@ -229,10 +230,10 @@ public class MorphologicalParser {
                                 ketemu = true;
                                 hasilList.add(temp.substring(1));
                             }
-                            
+
                             prefixTemp = temp.substring(1);
                             this.cekSufiks(prefixTemp, suf);
-                            
+
                             String temp2 = "t" + temp.substring(1);
                             if (cekLexicon(temp2)) {
                                 ketemu = true;
@@ -305,17 +306,21 @@ public class MorphologicalParser {
                         } else {
                             prefix = "te";
                         }
-                        
+
                         if (temp.substring(0, 1).equals("r")) {
                             prefix += "r";
-                            prefixTemp2=temp;
+                            prefixTemp2 = temp;
+                            if(cekLexicon(temp)){
+                                ketemu = true;
+                                hasilList.add(temp);
+                            }
                             //System.out.println(prefixTemp2);
                             if (cekLexicon(temp.substring(1))) {
                                 ketemu = true;
                                 hasilList.add(temp.substring(1));
                             } else {
                                 prefixTemp = temp.substring(1);
-                                
+
                             }
                         } else {
                             if (temp.length() > 2 && temp.substring(1, 3).equals("er")) {
@@ -417,86 +422,73 @@ public class MorphologicalParser {
         }
 
         //System.out.println("isi dari list");
-
         //System.out.println("Prefix " + prefix);
         //System.out.println("Prefixtemp " + prefixTemp);
         //System.out.println("Prefixtemp2 " + prefixTemp2);
-        String kataUlang="";
-        
-        if(hasilList.isEmpty()){
-            
-            if(hasil.contains("-")){
+        String kataUlang = "";
+
+        if (hasilList.isEmpty()) {
+
+            if (hasil.contains("-")) {
+                Parser parser = new Parser(this);
                 String[] cekDepanBelakang = hasil.split("-");
-                if(cekDepanBelakang[0].length()==cekDepanBelakang[1].length()){
-                    
+                if (cekDepanBelakang[0].length() == cekDepanBelakang[1].length()) {
                     try {
-                        
-                        kataUlang = new Parser().cekPengulangan(hasil);
-                        
+                        kataUlang = parser.cekPengulangan(hasil);
                     } catch (IOException ex) {
                         Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    if(!kataUlang.isEmpty()){
-                        
-                        
+                    if (!kataUlang.isEmpty()) {
                         hasilList.add(kataUlang);
                         return hasilList;
                     }
                 }
-                    this.cekSufiks(hasil, suf);   
-                   
-                   try {
-                        kataUlang = new Parser().cekPengulangan(hasilTanpaAkhiran);
-                    } catch (IOException ex) {
-                        Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    if(!kataUlang.isEmpty()){
-                        System.out.println(kataUlang);
-                        hasilList.add(kataUlang);
-                        return hasilList;
-                    }
-                
-                 
-                
-                   if(!prefixTemp2.isEmpty()){
-                       System.out.println("       "+prefixTemp2);
-                       kataUlang="";
+                this.cekSufiks(hasil, suf);
+
+                try {
+                    kataUlang = parser.cekPengulangan(hasilTanpaAkhiran);
+                } catch (IOException ex) {
+                    Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (!kataUlang.isEmpty()) {
+                    System.out.println(kataUlang);
+                    hasilList.add(kataUlang);
+                    return hasilList;
+                }
+
+                if (!prefixTemp2.isEmpty()) {
+                    System.out.println("       " + prefixTemp2);
+                    kataUlang = "";
                     try {
-                        kataUlang = new Parser().cekPengulangan(prefixTemp2);
-                        System.out.println("       "+kataUlang);
+                        kataUlang = parser.cekPengulangan(prefixTemp2);
+                        System.out.println("       " + kataUlang);
                     } catch (IOException ex) {
                         Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    if(!kataUlang.isEmpty()){                        
+                    if (!kataUlang.isEmpty()) {
                         hasilList.add(kataUlang);
                         return hasilList;
                     }
-                    this.cekSufiks(prefixTemp2, suf);   
-                   
-                   try {
+                    this.cekSufiks(prefixTemp2, suf);
+
+                    try {
                         kataUlang = new Parser().cekPengulangan(hasilTanpaAkhiran);
-                        System.out.println("        "+hasilTanpaAkhiran);
+                        System.out.println("        " + hasilTanpaAkhiran);
                     } catch (IOException ex) {
                         Logger.getLogger(MorphologicalParser.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    if(!kataUlang.isEmpty()){
+                    if (!kataUlang.isEmpty()) {
                         System.out.println(kataUlang);
                         hasilList.add(kataUlang);
                         return hasilList;
                     }
-                
+
+                }
+            } else {
+                this.cekSufiks(hasil, suf);
             }
-            }
-                
-            
-            else{
-                this.cekSufiks(hasil, suf);                
-            }
-                
+
         }
-            
-        
-          
 
         //boolean tandaBreak = false;
         //if (prefixTemp.length() != 0) {
@@ -541,23 +533,23 @@ public class MorphologicalParser {
 //            this.cekInfiks(hasilList.get(i));
 //        }
         this.cekSufiks(in, suf);
-        
-        if(hasilList.isEmpty()&&counter!=2){
-                hasil=prefixTemp;
-                counter++;
-                System.out.println("Ulangi");
-                hasilList=cekBerimbuhan(hasil,counter);
-                
-                if(hasilList.isEmpty()){
-                    hasilList=cekBerimbuhan(prefixTemp2,counter);
-                }
+
+        if (hasilList.isEmpty() && counter != 2) {
+            hasil = prefixTemp;
+            counter++;
+            System.out.println("Ulangi");
+            hasilList = cekBerimbuhan(hasil, counter);
+
+            if (hasilList.isEmpty()) {
+                hasilList = cekBerimbuhan(prefixTemp2, counter);
+            }
         }
-        
+
         return hasilList;
     }
 
     private void cekSufiks(String s, ArrayList<String> suf) {
-        this.hasilTanpaAkhiran=s;
+        this.hasilTanpaAkhiran = s;
         for (int i = 0; i < suf.size(); i++) {
             if (s.endsWith(suf.get(i))) {
                 System.out.println("suffix " + suf.get(i));
@@ -566,9 +558,8 @@ public class MorphologicalParser {
                     if (cekLexicon(temp)) {
                         hasilList.add(temp);
                         //tandaBreak = true;
-                    }
-                    else{
-                        this.hasilTanpaAkhiran=temp;
+                    } else {
+                        this.hasilTanpaAkhiran = temp;
                     }
                 }
             }

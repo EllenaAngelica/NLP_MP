@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 
 /**
@@ -15,6 +16,16 @@ import java.io.InputStreamReader;
  * Evelyn Wijaya                (2015730030)
  */
 public class Parser {
+    
+    private MorphologicalParser morpParser;
+    
+    public Parser(){
+        
+    }
+    public Parser(MorphologicalParser mp){
+        this.morpParser = mp;
+    }
+    
     /**
      * 
      * @param kata
@@ -24,11 +35,11 @@ public class Parser {
      */
     public boolean cekAdaDiLexicon(String kata) throws FileNotFoundException, IOException{
         // Load Lexicon
-        BufferedReader brLexicon=new BufferedReader(new InputStreamReader(new FileInputStream("list_kata.txt")));
+       /* BufferedReader brLexicon=new BufferedReader(new InputStreamReader(new FileInputStream("list_kata.txt")));
         String inputLexicon;
         while((inputLexicon=brLexicon.readLine())!=null && inputLexicon.length()!=0){
             Trie.getInstance().insert(inputLexicon);
-        }
+        }*/
         // Search in Lexicon
         return Trie.getInstance().search(kata);
     }
@@ -78,7 +89,21 @@ public class Parser {
             String[] pecah = kata.split("-");
             String depan = pecah[0];
             String belakang = pecah[1];
-            
+            ArrayList<String> depanList = new ArrayList<String>();
+            ArrayList<String> belakangList = new ArrayList<String>();
+            if(!depan.equals("")){
+                depanList.addAll(morpParser.cekBerimbuhan(depan, 0));
+            }
+            if(!belakang.equals("")){
+                belakangList.addAll(morpParser.cekBerimbuhan(belakang, 0));
+            }
+            for(int i = 0; i < depanList.size(); i++){
+                for(int j = 0; j < belakang.length(); j++){
+                    if(depanList.get(i).equals(belakangList.get(j))){
+                        return depan+" kata ulang penuh ";
+                    }
+                }
+            }
             if(depan.equals(belakang)){
                 return depan+" kata ulang penuh ";
             }
