@@ -97,6 +97,10 @@ public class Tester {
             ArrayList<String> result = new ArrayList<>();
             String temp = sc.next().toLowerCase();
             
+            if(temp.startsWith("-")){
+                temp=temp.substring(1);
+            }
+            
             String kataAwal="Kata awal: "+temp+" kata dasar: ";
            
             temp=hilangkanSimbol(temp); 
