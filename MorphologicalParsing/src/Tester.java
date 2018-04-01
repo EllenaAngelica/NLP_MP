@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  */
 public class Tester {
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("list_kata.txt")));
+        BufferedReader infix=new BufferedReader(new InputStreamReader(new FileInputStream("infiks.txt")));
         BufferedReader prefix=new BufferedReader(new InputStreamReader(new FileInputStream("prefiks.txt")));
         BufferedReader sufix=new BufferedReader(new InputStreamReader(new FileInputStream("sufiks.txt")));
         BufferedReader prefix1=new BufferedReader(new InputStreamReader(new FileInputStream("prefiks_1.txt")));
@@ -43,6 +43,7 @@ public class Tester {
         ArrayList<String> pref5= new ArrayList<String>();
         ArrayList<String> pref6= new ArrayList<String>();
         ArrayList<String> suf= new ArrayList<String>();
+        ArrayList<String> inf= new ArrayList<String>();
         while((input=prefix.readLine())!=null && input.length()!=0){
             pref.add(input);
         }
@@ -67,15 +68,19 @@ public class Tester {
         while((input=sufix.readLine())!=null && input.length()!=0){
             suf.add(input);
         }
+        while((input=infix.readLine())!=null && input.length()!=0){
+            inf.add(input);
+        }
         ArrayList[] preArr = {pref1, pref2, pref3, pref4, pref5, pref6};
-        MorphologicalParser parser = new MorphologicalParser(preArr,suf);
+        MorphologicalParser parser = new MorphologicalParser(preArr,suf,inf);
         BufferedReader inputtext=new BufferedReader(new InputStreamReader(new FileInputStream("inputantext.txt")));
-       Scanner sc=new Scanner(inputtext);
+       //Scanner sc=new Scanner(inputtext);
+       Scanner sc=new Scanner(System.in);
        
        ArrayList<String> hasilPenelusuran = new ArrayList<String>();
-        while(sc.hasNext()){
+        while(sc.hasNextLine()){
             ArrayList<String> result = new ArrayList<>();
-            String temp = sc.next().toLowerCase();
+            String temp = sc.nextLine().toLowerCase();
             
             if(temp.startsWith("-")){
                 temp=temp.substring(1);
@@ -85,7 +90,7 @@ public class Tester {
            
             temp=hilangkanSimbol(temp); 
             
-            System.out.println(temp+" kata");
+            //System.out.println(temp+" kata");
             
             result.addAll(parser.cekBerimbuhan(temp,0));
            
@@ -95,6 +100,8 @@ public class Tester {
                     simbol="";
                 }
                 kataAwal+=result.get(i)+simbol;
+                //System.out.println(result.get(i));
+               
             }
             result.clear();
             hasilPenelusuran.add(kataAwal);
@@ -111,7 +118,7 @@ public class Tester {
     }
     private static String hilangkanSimbol(String input){
         String output=input;
-            output=output.replaceAll("[^-a-zA-Z]*", "");
+            output=output.replaceAll("[^- a-zA-Z]*", "");
             return output;
     }
 }
