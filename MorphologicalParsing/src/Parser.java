@@ -82,25 +82,12 @@ public class Parser {
             String[] pecah = kata.split("-");
             String depan = pecah[0];
             String belakang = pecah[1];
-            ArrayList<String> depanList = new ArrayList<String>();
-            ArrayList<String> belakangList = new ArrayList<String>();
-            if(!depan.equals("")){
-                depanList.addAll(morpParser.cekBerimbuhan(depan, 0));
+           if(depan.equals(belakang)){
+                return depan+" kata ulang penuh ";
             }
-            if(!belakang.equals("")){
-                belakangList.addAll(morpParser.cekBerimbuhan(belakang, 0));
-            }
-            for(int i = 0; i < depanList.size(); i++){
-                for(int j = 0; j < belakang.length(); j++){
-                    if(depanList.get(i).equals(belakangList.get(j))){
-                        return depan+" kata ulang penuh ";
-                    }
-                }
-            }
-            if(depan.equals(belakang)){
-                return depan;
-                //return depan+" kata ulang penuh ";
-            }
+           
+            if(depan.length()==belakang.length()){           
+            
             char[] isiCharDepan = depan.toCharArray();
             char[] isiCharBelakang = belakang.toCharArray();
             boolean[] sama = new boolean[isiCharDepan.length];
@@ -118,8 +105,8 @@ public class Parser {
             }
             
             if(jumlahBeda<jumlahSama && isiCharDepan.length==isiCharBelakang.length){
-                return depan;
-                //return depan+" kata ulang berubah bunyi ";
+                return depan+" kata ulang berubah bunyi ";
+            }
             }
             
             
@@ -127,12 +114,10 @@ public class Parser {
         else{
             if(kata.charAt(0)==kata.charAt(2)&&kata.charAt(1)=='e'){
                 if((kata.charAt(0)=='j'||kata.charAt(0)=='t')&&!kata.endsWith("an")){
-                    return kata.substring(2);
-                    //return kata.substring(2)+" kata ulang sebagian ";
+                    return kata.substring(2)+" kata ulang sebagian ";
                 }
                 else if(kata.endsWith("an")){
-                    return kata.substring(2,kata.length()-2);
-                    //return kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
+                    return kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
                 }
                 
             }
