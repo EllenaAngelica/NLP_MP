@@ -98,7 +98,8 @@ public class Parser {
                 }
             }
             if(depan.equals(belakang)){
-                return depan+" kata ulang penuh ";
+                return depan;
+                //return depan+" kata ulang penuh ";
             }
             char[] isiCharDepan = depan.toCharArray();
             char[] isiCharBelakang = belakang.toCharArray();
@@ -117,7 +118,8 @@ public class Parser {
             }
             
             if(jumlahBeda<jumlahSama && isiCharDepan.length==isiCharBelakang.length){
-                return depan+" kata ulang berubah bunyi ";
+                return depan;
+                //return depan+" kata ulang berubah bunyi ";
             }
             
             
@@ -125,10 +127,12 @@ public class Parser {
         else{
             if(kata.charAt(0)==kata.charAt(2)&&kata.charAt(1)=='e'){
                 if((kata.charAt(0)=='j'||kata.charAt(0)=='t')&&!kata.endsWith("an")){
-                    return kata.substring(2)+" kata ulang sebagian ";
+                    return kata.substring(2);
+                    //return kata.substring(2)+" kata ulang sebagian ";
                 }
                 else if(kata.endsWith("an")){
-                    return kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
+                    return kata.substring(2,kata.length()-2);
+                    //return kata.substring(2,kata.length()-2)+" kata ulang sebagian ";
                 }
                 
             }
