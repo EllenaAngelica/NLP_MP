@@ -91,7 +91,7 @@ public class Parser {
                 belakangList.addAll(morpParser.cekBerimbuhan(belakang, 0));
             }
             for(int i = 0; i < depanList.size(); i++){
-                for(int j = 0; j < belakang.length(); j++){
+                for(int j = 0; j < belakangList.size(); j++){
                     if(depanList.get(i).equals(belakangList.get(j))){
                         return depan+" kata ulang penuh ";
                     }
