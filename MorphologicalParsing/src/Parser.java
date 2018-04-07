@@ -14,6 +14,9 @@ import java.util.ArrayList;
  * Ferdinandus Renaldi          (2015730028)
  * Ellena Angelica              (2015730029)
  * Evelyn Wijaya                (2015730030)
+ * 
+ * 
+ * Method untuk mendapatkan kata dasar dari kata ulang
  */
 public class Parser {
     
@@ -27,9 +30,11 @@ public class Parser {
     }
     
     /**
+     * Method untuk mengecek apakah kata tersebut adalah kata dasar
      * 
-     * @param kata
-     * @return true / false
+     * @param kata kata yang ingin dicek
+     * @return true : apabila kata tersebut ada di lexicon
+     *         false : apabila kata tersebut tidak ad di lexicon
      * @throws FileNotFoundException
      * @throws IOException 
      */
@@ -37,9 +42,11 @@ public class Parser {
         return Trie.getInstance().search(kata);
     }
     /**
+     * Method untuk mengecek apakah kata tersebut adalah kata ulang semu
      * 
-     * @param kata
-     * @return
+     * @param kata kata yang ingin dicek
+     * @return true : apabila kata tersebut adalah kata ulang semu
+     *         false : apabila kata tersebut adalah bukan kata ulang semu
      * @throws FileNotFoundException
      * @throws IOException 
      */
@@ -55,9 +62,12 @@ public class Parser {
         return res;
     }
     /**
+     * Method untuk mengecek apakah kata tersebut adalah kata ulang sebagiian
      * 
-     * @param kata
-     * @return
+     * 
+     * @param kata kata yang ingin dicek
+     * @return true : apabila kata tersebut adalah kata ulang semu
+     *         false : apabila kata tersebut adalah bukan kata ulang semu
      * @throws FileNotFoundException
      * @throws IOException 
      */
@@ -73,6 +83,12 @@ public class Parser {
         return res;
     }
     
+    /**
+     * Method untuk mengecek pengulangan pada sebuah kata
+     * @param kata kata yang ingin dicek
+     * @return
+     * @throws IOException 
+     */
     public String cekPengulangan(String kata) throws IOException{
         String hasil="";
         if(cekUlangSemu(kata)){
@@ -147,6 +163,7 @@ public class Parser {
      * @return
      * @throws IOException 
      */
+    
     public String cekReduplikasi(String kata) throws IOException{
         String res = "";
         if(!kata.contains("-") && this.cekUlangSebagian(kata)){ // kata ulang sebagian
